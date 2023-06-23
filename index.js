@@ -10,14 +10,14 @@ function background(elements){
         const example = Math.floor(Math.random()*10+1)
         // div.style.animationName = `example${example}`
         div.style.animationName = `example1`
-        div.style.transform = `translateY(${i*11}rem) translateX(${-example*2}rem) rotate(130deg)`
+        div.style.transform = `translateY(${i*20}rem) translateX(${-example*2}rem) rotate(130deg)`
         // div.style.left = "-1000px"
         div.style.height = `${example}00`
         div.className= `background b1 `
         setTimeout(()=>{
             backgroundEl.append(div)
 
-        }, example * 200)
+        }, example * 1200)
         // i===1?div.style.backgroundColor="red":console.log("nothing");
     }
     console.log("heeei")
