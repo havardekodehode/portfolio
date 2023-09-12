@@ -1,48 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"> 
-    <script defer src="index.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="shortcut icon" href="*" type="image/x-icon" />
+        <link rel="stylesheet" href="variables.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="swipe.css" />
+        <link rel="stylesheet" href="media-queries.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="index.js"></script>
+    </head>
 
-<body>
-    <div id="background">
-        
-    </div>  
-    <div class="header">
-        <h1>Hi!<br>My name is Håvard</h1>
-        <img src="images/portrait.jpg" id="portrait">
-    </div>
-    <div class="section">
-        <h2>About me</h2>
-        <p>I am super duper duper duper great. Hire me.</p>
-    </div>
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h2>Password-manager Scrimba</h2>
-                <img src="images/passw.png">
-                <!-- <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaPasswordgenerator/</a></p> -->
+    <body>
+        <div class="page card-container" id="page1" data-tab="1">
+            <!-- Content of the first page -->
+
+            <div class="card">
+                <div class="is-like">LIKE</div>
+
+                <div class="info">
+                    <h4>Håvard Einarsen</h4>
+                    <h5>27, Full stack deveveloper</h5>
+                </div>
             </div>
-            <div class="project">
-                <h2>Password-counter Scrimba</h2>
-                <img src="images/passC.png">
-                <!-- <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaPassengerCounter/</a></p> -->
-            </div>
-            <div class="project">
-                <h2>Unit converter Scrimba</h2>
-                <img src="images/unitC.png">
-                <!-- <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaUnitConverter/</a></p> -->
+
+            
+            <div class="actions">
+                <button id="dislike">
+                    <img src="images/x.svg" alt="Image of an X" />
+                </button>
+                <button id="like">
+                    <img
+                        src="images/heart.svg"
+                        alt="Image of a heart"
+                        srcset=""
+                    />
+                </button>
             </div>
         </div>
-    </div>
-    
-    <div class="section">©</div>
-    
-</body>
+        <div class="page" id="page2" data-tab="2">
+            <!-- Content of the second page -->
+
+            <h1>About me</h1>
+            <p>
+                Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel og bor
+                under skyen, Bergen.<br /><br />
+
+                For tiden har jeg praksis hos DNB som Junior utvikler, hvor jeg
+                er en del av et team som jobber universell utforming i DNBs
+                mobil app.<br /><br />
+
+                I Bergen har jeg alt jeg trenger for å trives: fiske,
+                fjellturer, skiturer, gaming og Premier league kanalene.<br /><br />
+
+                Etter å ha deltatt på en intensiv bootcamp. Kodehode, har jeg
+                iløpet av de siste 9 månedene dyppet tærne mine i HTML, CSS, JS,
+                React, Docker, MongoDB og mye mer. Jeg føler meg trygg med disse
+                verktøyene og du kan se hvordan jeg har løst problemer med dem
+                på mine prosjekter i Github.<br /><br />Jeg kan knapt vente til
+                å bryne meg på nye utfordringer, forbedre meg ytterligere og
+                utvikle morgendagens applikasjoner. Hvis du ønsker meg med i
+                teamet ditt, er du velkommen til å ta kontakt med meg her. Takk
+                for din interesse
+            </p>
+        </div>
+        <div class="page" id="page3" data-tab="3">
+
+            <!-- Content of the third page -->
+            <div class="projectsContainer">
+                <div class="modal" id="pokemonModal">
+                    <video  autoplay loop>
+                        <source src="/videos/Pokedex preview.webm" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+                <!-- <div class="modal" id="marsModal"></div> -->
+                <!-- <div class="modal" id="todoModal"></div> -->
+
+
+                <div class="wrapper" id="pokemonWrapper">
+                    <div class="project" id="pokedex">
+                        <h2>Pokedex</h2>
+                        <img src="images/pokeball.svg" alt="">
+                        <div class="techContainer">
+                            <div class="tech html">
+                                <h4>HTML</h4>
+                            </div>
+                            <div class="tech css">
+                                <h4>CSS</h4>
+                            </div>
+                            <div class="tech ts">
+                                <h4>TS</h4>
+                            </div>
+                            <div class="tech react">
+                                <h4>React</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wrapper" id="marsWrapper">
+
+                    <div class="project">
+                        <h2>Weight on Mars</h2>
+                        <img src="images/MarsBR.webp" alt="">
+                        <div class="techContainer">
+                            <div class="tech html">
+                                <h4>HTML</h4>
+                            </div>
+                            <div class="tech css">
+                                <h4>CSS</h4>
+                            </div>
+                            <div class="tech js">
+                                <h4>JS</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="wrapper" id="marsWrapper">
+                    <div class="project">
+                        <h2>Todo list</h2>
+                        <img src="images/checkbox.svg" alt="">
+                        <div class="techContainer">
+                            <div class="tech html">
+                                <h4>HTML</h4>
+                            </div>
+                            <div class="tech css">
+                                <h4>CSS</h4>
+                            </div>
+                            <div class="tech js">
+                                <h4>JS</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+              
+               
+            </div>
+
+        </div>
+        </div>
+        <div class="page" id="page4" data-tab="4">
+            <!-- Content of the fourth page -->
+        </div>
+        <!-- <div id="background"></div> -->
+        <!-- <div class="header">
+            <h1>Hi!<br />My name is Håvard</h1>
+            <img src="images/portrait.jpg" id="portrait" />
+        </div>
+        <div class="section">
+            <h2>About me</h2>
+            <p>
+                Hi! My name is Håvard. I am 26 years old and live underneath the
+                rainy clouds of Bergen, Norway.  Currently I have an internship
+                at DNB as Junior developer, where I am a part of a team creating
+                accessibility features for DNBs mobile app.  Here in Bergen I
+                thrive doing things I love, such as hiking, fishing, skiing,
+                gaming and religiously following english football.  Having
+                attended a bootcamp, Kodehode, in Bergen 9 months ago I have
+                dipped my toes deep into HTML, CSS, Javascript, React, Docker,
+                MongoDB and many many more, I feel comfortable solving problems
+                using these tools, as shown in my list of projects and seen in
+                my github. I cannot wait to take on new challenges, improve
+                further and develop the applications of tomorrow. If you want me
+                as a part of your team, feel free to get in touch with me
+                here.Thank you for your interest.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h2>Password-manager Scrimba</h2>
+                    <img src="images/passw.png" />
+                    <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaPasswordgenerator/</a></p>
+                </div>
+                <div class="project">
+                    <h2>Password-counter Scrimba</h2>
+                    <img src="images/passC.png" />
+                    <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaPassengerCounter/</a></p>
+                </div>
+                <div class="project">
+                    <h2>Unit converter Scrimba</h2>
+                    <img src="images/unitC.png" />
+                    <p>Github link: <br>"Github link"<br>Pages: <a>https://havardekodehode.github.io/scrimbaUnitConverter/</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">©</div> -->
+    </body>
 </html>

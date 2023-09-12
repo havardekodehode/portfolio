@@ -1,0 +1,9 @@
+:root {
+    /* Palette */
+    --color-1: #f8e8f8;
+    --color-2: #d6c9de;
+
+    /* Font */
+    --font-size: 16px;
+    --font-family: "Montserrat", sans-serif;
+}
