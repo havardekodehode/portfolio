@@ -105,37 +105,3 @@ function handleTouchEnd(e) {
 }
 
 // Swtiping
-
-const sections = document.querySelectorAll(".page");
-let currentSectionIndex = 0;
-let isSwiping = false;
-let initialTouchY = 0;
-let scrollY = 0;
-
-document.addEventListener("touchstart", (e) => {
-    isSwiping = true;
-    initialTouchY = e.touches[0].clientY;
-    scrollY = window.scrollY;
-});
-
-document.addEventListener("touchend", () => {
-    isSwiping = false;
-    const diffY = window.scrollY - currentSectionIndex * window.innerHeight;
-
-    if (diffY > 50 && currentSectionIndex > 0) {
-        // Swipe up to go to the previous section
-        currentSectionIndex--;
-    } else if (diffY < -20 && currentSectionIndex < sections.length - 1) {
-        // Swipe down to go to the next section
-        currentSectionIndex++;
-    }
-
-    scrollToSection(currentSectionIndex);
-});
-
-function scrollToSection(index) {
-    window.scrollTo({
-        top: index + 1 * window.innerHeight,
-        behavior: "smooth",
-    });
-}
