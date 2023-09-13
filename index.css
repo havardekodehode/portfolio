@@ -104,7 +104,7 @@ button {
     /* font-size: medium; */
     line-height: 24px;
     max-height: 80vh;
-    overflow: scroll;
+    /* overflow: scroll; */
 
     box-sizing: border-box;
 }
@@ -123,7 +123,6 @@ button {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* Make the modal visible when the 'visible' class is added */
 .modal.visible {
     opacity: 1;
     visibility: visible;
@@ -132,6 +131,10 @@ button {
 .modal video {
     height: auto;
     width: 100%;
+}
+
+#pokemonVideo {
+    clip-path: inset(0% 0% 3% 0%);
 }
 
 #page3 {

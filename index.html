@@ -76,18 +76,24 @@
 
             <!-- Content of the third page -->
             <div class="projectsContainer">
-                <div class="modal" id="pokemonModal">
-                    <video  autoplay loop>
-                        <source src="/videos/Pokedex preview.webm" type="video/mp4">
+                <div class="modal" id="pokedexModal">
+                    <video muted autoplay loop id="pokemonVideo">
+                        <source src="/videos/pokedexPreviewMobile.webm" type="video/mp4">
                         <source src="movie.ogg" type="video/ogg">
                         Your browser does not support the video tag.
                       </video>
                 </div>
-                <!-- <div class="modal" id="marsModal"></div> -->
-                <!-- <div class="modal" id="todoModal"></div> -->
+                <div class="modal" id="marsModal">
+                    <video  muted autoplay loop id="pokemonVideo">
+                        <source src="/videos/marsPreview.webm" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+                <div class="modal" id="todoModal"></div>
 
 
-                <div class="wrapper" id="pokemonWrapper">
+                <div class="wrapper" id="pokedex">
                     <div class="project" id="pokedex">
                         <h2>Pokedex</h2>
                         <img src="images/pokeball.svg" alt="">
@@ -108,7 +114,7 @@
                     </div>
                 </div>
                 
-                <div class="wrapper" id="marsWrapper">
+                <div class="wrapper" id="mars">
 
                     <div class="project">
                         <h2>Weight on Mars</h2>
@@ -128,7 +134,7 @@
 
                 </div>
 
-                <div class="wrapper" id="marsWrapper">
+                <div class="wrapper" id="todo">
                     <div class="project">
                         <h2>Todo list</h2>
                         <img src="images/checkbox.svg" alt="">

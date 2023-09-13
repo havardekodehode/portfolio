@@ -69,7 +69,6 @@ function cancel() {
 //Modal on mousedown
 
 const page3 = document.getElementById("page3");
-const project1 = document.getElementById("pokemonWrapper");
 
 const pokemonModal = document.getElementById("pokemonModal");
 const marsModal = document.getElementById("marsModal");
@@ -77,56 +76,66 @@ const todoModal = document.getElementById("todoModal");
 
 const allProjects = document.querySelectorAll(".wrapper");
 
-let touchStartTime = 0;
-let touchTimeout;
+// let touchStartTime = 0;
+// let touchTimeout;
 
-project1.addEventListener("touchstart", handleTouchStart);
-project1.addEventListener("touchend", handleTouchEnd);
+// const project1 = document.getElementById("pokemonWrapper");
+
+// project1.addEventListener("touchstart", handleTouchStart);
+// project1.addEventListener("touchend", handleTouchEnd);
+
+allProjects.forEach(
+    (p) => (
+        p.addEventListener("touchstart", handleTouchStart),
+        p.addEventListener("touchend", handleTouchEnd)
+    )
+);
 
 function handleTouchStart(e) {
-    // Record the start time when the user touches the Pokemon project.
-    touchStartTime = Date.now();
-
-    // Set a timeout to show the modal after half a second (500 milliseconds).
-    touchTimeout = setTimeout(() => {
-        pokemonModal.classList.add("visible");
-    }, 100);
-
-    // Prevent any default touch behavior, such as scrolling or zooming.
-    e.preventDefault();
+    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
+    setTimeout(() => {
+        currentModal.classList.add("visible");
+    }, 200);
+    e.preventDefault(); //prevent scroll/zoom
 }
 
 function handleTouchEnd(e) {
-    // Clear the timeout if the touch ends before half a second.
-    clearTimeout(touchTimeout);
-
-    // Check if the touch duration was longer than half a second.
-    const touchEndTime = Date.now();
-    const touchDuration = touchEndTime - touchStartTime;
-
-    if (touchDuration >= 500) {
-        // The touch duration was long enough, so keep the modal visible.
-        pokemonModal.classList.remove("visible");
-    }
+    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
+    currentModal.classList.remove("visible");
 }
 
-// project1.addEventListener("mousedown", handleMouseDown);
+// Swtiping
 
-// function handleMouseDown(e) {
-//     console.log(e);
-//     switch (e.currentTarget.id) {
-//         case "pokemonWrapper":
-//             pokemonModal.classList.toggle("visible");
-//             pokemonModal.addEventListener("click", handleMouseDown);
-//             break;
-//         case "marsWrapper":
-//             break;
-//         case "todoWrapper":
-//             break;
+const sections = document.querySelectorAll(".page");
+let currentSectionIndex = 0;
+let isSwiping = false;
+let initialTouchY = 0;
+let scrollY = 0;
 
-//         default:
-//             pokemonModal.classList.toggle("visible");
+document.addEventListener("touchstart", (e) => {
+    isSwiping = true;
+    initialTouchY = e.touches[0].clientY;
+    scrollY = window.scrollY;
+});
 
-//             break;
-//     }
-// }
+document.addEventListener("touchend", () => {
+    isSwiping = false;
+    const diffY = window.scrollY - currentSectionIndex * window.innerHeight;
+
+    if (diffY > 50 && currentSectionIndex > 0) {
+        // Swipe up to go to the previous section
+        currentSectionIndex--;
+    } else if (diffY < -20 && currentSectionIndex < sections.length - 1) {
+        // Swipe down to go to the next section
+        currentSectionIndex++;
+    }
+
+    scrollToSection(currentSectionIndex);
+});
+
+function scrollToSection(index) {
+    window.scrollTo({
+        top: index + 1 * window.innerHeight,
+        behavior: "smooth",
+    });
+}
