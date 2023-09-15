@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="shortcut icon" href="*" type="image/x-icon" />
+        <!-- <link rel="shortcut icon" href="*" type="image/x-icon" /> -->
         <link rel="stylesheet" href="variables.css" />
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="swipe.css" />
@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <div class="page card-container" id="page1" data-tab="1">
+        <section class="card-container" id="section1" data-tab="1">
             <!-- Content of the first page -->
 
             <div class="card">
@@ -32,7 +32,6 @@
                 </div>
             </div>
 
-            
             <div class="actions">
                 <button id="dislike">
                     <img src="images/x.svg" alt="Image of an X" />
@@ -45,8 +44,8 @@
                     />
                 </button>
             </div>
-        </div>
-        <div class="page" id="page2" data-tab="2">
+        </section>
+        <section id="section2" data-tab="2">
             <!-- Content of the second page -->
 
             <h1>About me</h1>
@@ -71,33 +70,50 @@
                 teamet ditt, er du velkommen til å ta kontakt med meg her. Takk
                 for din interesse
             </p>
-        </div>
-        <div class="page" id="page3" data-tab="3">
+        </section>
+        <section id="section3" data-tab="3">
+            <!-- <h1>Projects</h1> -->
 
             <!-- Content of the third page -->
             <div class="projectsContainer">
                 <div class="modal" id="pokedexModal">
                     <video muted autoplay loop id="pokemonVideo">
-                        <source src="/videos/pokedexPreviewMobile.webm" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
+                        <source
+                            id="pokemonVideoSrc"
+                            src="/videos/pokedexMobile.mp4"
+                            type="video/mp4"
+                        />
+                        <!-- <source src="movie.ogg" type="video/ogg" /> -->
                         Your browser does not support the video tag.
-                      </video>
+                    </video>
                 </div>
                 <div class="modal" id="marsModal">
-                    <video  muted autoplay loop id="pokemonVideo">
-                        <source src="/videos/marsPreview.webm" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
+                    <video muted autoplay loop id="marsVideo">
+                        <source
+                            src="/videos/marsMobile.mp4"
+                            type="video/mp4"
+                            id="marsVideoSrc"
+                        />
+                        <source src="movie.ogg" type="video/ogg" />
                         Your browser does not support the video tag.
-                      </video>
+                    </video>
                 </div>
-                <div class="modal" id="todoModal"></div>
-
+                <div class="modal" id="todoModal">
+                    <video muted autoplay loop id="todoVideo">
+                        <source
+                            src="/videos/todoMobile.mp4"
+                            type="video/mp4"
+                            id="todoVideoSrc"
+                        />
+                        <source src="movie.ogg" type="video/ogg" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
                 <div class="wrapper" id="pokedex">
-
                     <div class="project" id="pokedex">
                         <h2>Pokedex</h2>
-                        <img src="images/pokeball.svg" alt="">
+                        <img src="images/pokeball.svg" alt="" />
                         <div class="techContainer">
                             <div class="tech html">
                                 <h4>HTML</h4>
@@ -112,17 +128,16 @@
                                 <h4>React</h4>
                             </div>
                         </div>
+                        <a href="https://github.com/havardekodehode/Pokedex"
+                            >Github</a
+                        >
                     </div>
                 </div>
 
-                <h3>Touch on projects, if on mobile device</h3>
-
-                
                 <div class="wrapper" id="mars">
-
                     <div class="project">
                         <h2>Weight on Mars</h2>
-                        <img src="images/MarsBR.webp" alt="">
+                        <img src="images/MarsBR.webp" alt="" />
                         <div class="techContainer">
                             <div class="tech html">
                                 <h4>HTML</h4>
@@ -134,14 +149,17 @@
                                 <h4>JS</h4>
                             </div>
                         </div>
+                        <a
+                            href="https://github.com/havardekodehode/weightOnMars"
+                            >Github</a
+                        >
                     </div>
-
                 </div>
 
                 <div class="wrapper" id="todo">
                     <div class="project">
                         <h2>Todo list</h2>
-                        <img src="images/checkbox.svg" alt="">
+                        <img src="images/checkbox.svg" alt="" />
                         <div class="techContainer">
                             <div class="tech html">
                                 <h4>HTML</h4>
@@ -153,19 +171,15 @@
                                 <h4>JS</h4>
                             </div>
                         </div>
+                        <a href="https://github.com/havardekodehode/todo"
+                            >Github</a
+                        >
                     </div>
-
                 </div>
-
-              
-               
             </div>
-
-        </div>
-        </div>
-        <div class="page" id="page4" data-tab="4">
+        </section>
+        <section id="section4" data-tab="4">
             <!-- Content of the fourth page -->
-        </div>
-
+        </section>
     </body>
 </html>

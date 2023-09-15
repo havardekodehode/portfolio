@@ -1,12 +1,27 @@
 @media screen and (max-width: 375px) {
+    .modal {
+        scale: 0.5;
+    }
 }
 @media screen and (min-width: 475px) {
 }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 565px) {
     body,
-    .page {
-        max-width: 600px;
+    section {
+        max-width: 900px;
         margin: 0 auto;
     }
+
+    #pokemonVideo {
+        clip-path: inset(0% 10% 0% 10%);
+    }
+    #marsVideo {
+        clip-path: inset(10% 0% 10% 1%);
+    }
+    #todoVideo {
+        clip-path: inset(10% 0% 10% 1%);
+    }
+}
+@media screen and (min-width: 765px) {
 }

@@ -4,12 +4,18 @@ html {
     padding: 0px;
     font-size: var(--font-size);
     font-family: var(--font-family);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: var(--color-2);
     /* overflow: hidden; */
+    /* max-width: 600px; */
 }
 
-#page1,
+.body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+#section1,
 .image,
 .card,
 .actions,
@@ -18,15 +24,16 @@ html {
     display: flex;
 }
 
-#page1 {
+#section1 {
     flex-direction: column;
+    /* max-width: 100%; */
     /* overflow-x: hidden; */
 }
 
-.page {
+section {
+    scroll-snap-align: center;
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: start;
 }
 
 .card {
@@ -91,25 +98,26 @@ button {
     scale: 1;
 }
 
-#page2 {
+#section2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#page2 p {
+#section2 p {
     width: 80%;
     margin: 0 auto;
     text-align: center;
     /* font-size: medium; */
     line-height: 24px;
     max-height: 80vh;
-    /* overflow: scroll; */
+    overflow: scroll;
 
     box-sizing: border-box;
 }
 
 .modal {
+    /* position: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,14 +138,14 @@ button {
 
 .modal video {
     height: auto;
-    width: 100%;
+    width: 40%;
 }
 
 #pokemonVideo {
-    clip-path: inset(0% 0% 3% 0%);
+    /* clip-path: inset(0% 0% 0% 0%); */
 }
 
-#page3 {
+#section3 {
     overflow: hidden;
     padding: 1rem 0;
     box-sizing: border-box;
@@ -163,7 +171,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    min-width: 70%;
 }
 
 .project {
@@ -243,7 +251,7 @@ h1 {
     background-color: #fb4f68;
 } */
 
-#page3 {
+#section3 {
     width: 100vw;
     position: relative;
 }
