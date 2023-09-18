@@ -32,6 +32,10 @@
     #todoVideo {
         clip-path: inset(10% 0% 10% 1%);
     }
+    .modal video {
+        height: auto;
+        width: 40%;
+    }
 }
 @media screen and (min-width: 765px) {
 }

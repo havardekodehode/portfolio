@@ -19,6 +19,7 @@ function createModalElement(project) {
     const source = createHtml("source", {
         src: project.videoSrc,
         type: "video/mp4",
+        id: `${project.id}VideoSrc`,
     });
 
     const fallback = document.createTextNode(

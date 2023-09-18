@@ -84,36 +84,91 @@ const todoModal = document.getElementById("todoModal");
 
 const allProjects = document.querySelectorAll(".wrapper");
 
-allProjects.forEach(
-    (p) => (
-        p.addEventListener("touchstart", handleTouchStart),
-        p.addEventListener("touchend", handleTouchEnd),
-        p.addEventListener("touchcancel", handleTouchEnd)
-    )
-);
+allProjects.forEach((p) => {
+    p.addEventListener("mousedown", handleStart);
+    p.addEventListener("touchstart", handleStart);
+    p.addEventListener("mouseleave", handleEnd);
+    p.addEventListener("touchend", handleEnd);
+    p.addEventListener("touchcancel", handleEnd);
+});
 
-function handleTouchStart(e) {
-    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
-    setTimeout(() => {
+function handleStart(e) {
+    if (e.type === "touchstart") {
+        const currentModal = document.getElementById(
+            `${e.currentTarget.id}Modal`
+        );
+        setTimeout(() => {
+            currentModal.classList.add("visible");
+            const video = currentModal.querySelector("video");
+            video.play();
+        }, 200);
+        e.preventDefault(); // Prevent scroll/zoom for touch events
+    } else if (e.type === "mousedown") {
+        const currentModal = document.getElementById(
+            `${e.currentTarget.id}Modal`
+        );
         currentModal.classList.add("visible");
         const video = currentModal.querySelector("video");
         video.play();
-    }, 200);
-    e.preventDefault(); //prevent scroll/zoom
+    }
 }
 
-function handleTouchEnd(e) {
-    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
-    currentModal.classList.remove("visible");
-    const video = currentModal.querySelector("video");
-    video.pause();
-    video.currentTime = 0;
+function handleEnd(e) {
+    if (e.type === "touchend" || e.type === "touchcancel") {
+        const currentModal = document.getElementById(
+            `${e.currentTarget.id}Modal`
+        );
+        currentModal.classList.remove("visible");
+        const video = currentModal.querySelector("video");
+        video.pause();
+        video.currentTime = 0;
+    } else if (e.type === "mouseleave") {
+        const currentModal = document.getElementById(
+            `${e.currentTarget.id}Modal`
+        );
+        currentModal.classList.remove("visible");
+        const video = currentModal.querySelector("video");
+        video.pause();
+        video.currentTime = 0;
+    }
 }
+
+// const allProjects = document.querySelectorAll(".wrapper");
+
+// allProjects.forEach(
+//     (p) => (
+//         p.addEventListener("touchstart", handleTouchStart),
+//         p.addEventListener("touchend", handleTouchEnd),
+//         p.addEventListener("touchcancel", handleTouchEnd)
+
+//         // Add event listeners for mouse events
+//     p.addEventListener("mousedown", handleMouseDown);
+//     p.addEventListener("mouseleave", handleMouseLeave);
+//     )
+// );
+
+// function handleTouchStart(e) {
+//     const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
+//     setTimeout(() => {
+//         currentModal.classList.add("visible");
+//         const video = currentModal.querySelector("video");
+//         video.play();
+//     }, 200);
+//     e.preventDefault(); //prevent scroll/zoom
+// }
+
+// function handleTouchEnd(e) {
+//     const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
+//     currentModal.classList.remove("visible");
+//     const video = currentModal.querySelector("video");
+//     video.pause();
+//     video.currentTime = 0;
+// }
 
 //video
 function updateVideoSources() {
     const w = window.matchMedia("(min-width: 900px)");
-    const source1 = document.getElementById("pokemonVideoSrc");
+    const source1 = document.getElementById("pokedexVideoSrc");
     const source2 = document.getElementById("marsVideoSrc");
     const source3 = document.getElementById("todoVideoSrc");
 
