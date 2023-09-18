@@ -64,6 +64,7 @@ function createProjectElement(project) {
 
     const githubLink = createHtml("a", {
         href: `${project.githubLink}`,
+        textContent: "Github",
     });
 
     projectElement.append(projectName, projectImage, techContainer, githubLink);
