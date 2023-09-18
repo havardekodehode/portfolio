@@ -1,3 +1,9 @@
+import { addProjectsToContainer } from "./HTMLElements.js";
+
+addProjectsToContainer();
+
+//Tinder swipe
+
 const imageEl = document.querySelector(".card");
 
 // imageEl.addEventListener()

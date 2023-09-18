@@ -2,184 +2,70 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <!-- <link rel="shortcut icon" href="*" type="image/x-icon" /> -->
         <link rel="stylesheet" href="variables.css" />
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="section1.css" />
+        <link rel="stylesheet" href="structure.css" />
         <link rel="stylesheet" href="swipe.css" />
         <link rel="stylesheet" href="media-queries.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
-        <script defer src="index.js"></script>
+        <script src="index.js" type="module" defer></script>
     </head>
-
     <body>
-        <section class="card-container" id="section1" data-tab="1">
-            <!-- Content of the first page -->
+        <div class="sectionContainer">
+            <section class="cardContainer" id="section1">
+                <div class="card">
+                    <div class="is-like">LIKE</div>
 
-            <div class="card">
-                <div class="is-like">LIKE</div>
-
-                <div class="info">
-                    <h4>Håvard Einarsen</h4>
-                    <h5>27, Full stack deveveloper</h5>
-                </div>
-            </div>
-
-            <div class="actions">
-                <button id="dislike">
-                    <img src="images/x.svg" alt="Image of an X" />
-                </button>
-                <button id="like">
-                    <img
-                        src="images/heart.svg"
-                        alt="Image of a heart"
-                        srcset=""
-                    />
-                </button>
-            </div>
-        </section>
-        <section id="section2" data-tab="2">
-            <!-- Content of the second page -->
-
-            <h1>About me</h1>
-            <p>
-                Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel og bor
-                under skyen, Bergen.<br /><br />
-
-                For tiden har jeg praksis hos DNB som Junior utvikler, hvor jeg
-                er en del av et team som jobber universell utforming i DNBs
-                mobil app.<br /><br />
-
-                I Bergen har jeg alt jeg trenger for å trives: fiske,
-                fjellturer, skiturer, gaming og Premier league kanalene.<br /><br />
-
-                Etter å ha deltatt på en intensiv bootcamp. Kodehode, har jeg
-                iløpet av de siste 9 månedene dyppet tærne mine i HTML, CSS, JS,
-                React, Docker, MongoDB og mye mer. Jeg føler meg trygg med disse
-                verktøyene og du kan se hvordan jeg har løst problemer med dem
-                på mine prosjekter i Github.<br /><br />Jeg kan knapt vente til
-                å bryne meg på nye utfordringer, forbedre meg ytterligere og
-                utvikle morgendagens applikasjoner. Hvis du ønsker meg med i
-                teamet ditt, er du velkommen til å ta kontakt med meg her. Takk
-                for din interesse
-            </p>
-        </section>
-        <section id="section3" data-tab="3">
-            <!-- <h1>Projects</h1> -->
-
-            <!-- Content of the third page -->
-            <div class="projectsContainer">
-                <div class="modal" id="pokedexModal">
-                    <video muted autoplay loop id="pokemonVideo">
-                        <source
-                            id="pokemonVideoSrc"
-                            src="/videos/pokedexMobile.mp4"
-                            type="video/mp4"
-                        />
-                        <!-- <source src="movie.ogg" type="video/ogg" /> -->
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="modal" id="marsModal">
-                    <video muted autoplay loop id="marsVideo">
-                        <source
-                            src="/videos/marsMobile.mp4"
-                            type="video/mp4"
-                            id="marsVideoSrc"
-                        />
-                        <source src="movie.ogg" type="video/ogg" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="modal" id="todoModal">
-                    <video muted autoplay loop id="todoVideo">
-                        <source
-                            src="/videos/todoMobile.mp4"
-                            type="video/mp4"
-                            id="todoVideoSrc"
-                        />
-                        <source src="movie.ogg" type="video/ogg" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-                <div class="wrapper" id="pokedex">
-                    <div class="project" id="pokedex">
-                        <h2>Pokedex</h2>
-                        <img src="images/pokeball.svg" alt="" />
-                        <div class="techContainer">
-                            <div class="tech html">
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="tech css">
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="tech ts">
-                                <h4>TS</h4>
-                            </div>
-                            <div class="tech react">
-                                <h4>React</h4>
-                            </div>
-                        </div>
-                        <a href="https://github.com/havardekodehode/Pokedex"
-                            >Github</a
-                        >
+                    <div class="info">
+                        <h4>Håvard Einarsen</h4>
+                        <h5>27, Full stack deveveloper</h5>
                     </div>
                 </div>
 
-                <div class="wrapper" id="mars">
-                    <div class="project">
-                        <h2>Weight on Mars</h2>
-                        <img src="images/MarsBR.webp" alt="" />
-                        <div class="techContainer">
-                            <div class="tech html">
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="tech css">
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="tech js">
-                                <h4>JS</h4>
-                            </div>
-                        </div>
-                        <a
-                            href="https://github.com/havardekodehode/weightOnMars"
-                            >Github</a
-                        >
-                    </div>
+                <div class="actions">
+                    <button id="dislike">
+                        <img src="images/x.svg" alt="Image of an X" />
+                    </button>
+                    <button id="like">
+                        <img
+                            src="images/heart.svg"
+                            alt="Image of a heart"
+                            srcset=""
+                        />
+                    </button>
                 </div>
+            </section>
+            <section id="section2">
+                <h1>About me</h1>
+                <p>
+                    Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel og
+                    bor under skyen, Bergen.<br /><br />
 
-                <div class="wrapper" id="todo">
-                    <div class="project">
-                        <h2>Todo list</h2>
-                        <img src="images/checkbox.svg" alt="" />
-                        <div class="techContainer">
-                            <div class="tech html">
-                                <h4>HTML</h4>
-                            </div>
-                            <div class="tech css">
-                                <h4>CSS</h4>
-                            </div>
-                            <div class="tech js">
-                                <h4>JS</h4>
-                            </div>
-                        </div>
-                        <a href="https://github.com/havardekodehode/todo"
-                            >Github</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="section4" data-tab="4">
-            <!-- Content of the fourth page -->
-        </section>
+                    For tiden har jeg praksis hos DNB som Junior utvikler, hvor
+                    jeg er en del av et team som jobber universell utforming i
+                    DNBs mobil app.<br /><br />
+
+                    I Bergen har jeg alt jeg trenger for å trives: fiske,
+                    fjellturer, skiturer, gaming og Premier league kanalene.<br /><br />
+
+                    Etter å ha deltatt på en intensiv bootcamp. Kodehode, har
+                    jeg iløpet av de siste 9 månedene dyppet tærne mine i HTML,
+                    CSS, JS, React, Docker, MongoDB og mye mer. Jeg føler meg
+                    trygg med disse verktøyene og du kan se hvordan jeg har løst
+                    problemer med dem på mine prosjekter i Github.<br /><br />Jeg
+                    kan knapt vente til å bryne meg på nye utfordringer,
+                    forbedre meg ytterligere og utvikle morgendagens
+                    applikasjoner. Hvis du ønsker meg med i teamet ditt, er du
+                    velkommen til å ta kontakt med meg her. Takk for din
+                    interesse
+                </p>
+            </section>
+            <section id="section3">
+                <div class="projectsContainer"></div>
+            </section>
+            <section id="section4"></section>
+        </div>
     </body>
 </html>

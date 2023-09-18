@@ -1,0 +1,108 @@
+#section3 {
+    overflow: hidden;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    width: 100vw;
+    position: relative;
+    /* background: radial-gradient(rgba(0, 0, 0, 0.4), var(--color-1)); */
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.projectsContainer h2 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 3rem;
+    flex-grow: 1;
+    max-height: 100%;
+    width: 100%;
+}
+
+.project img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.techContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tech {
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.html {
+    background-color: #c96f58;
+}
+
+.css {
+    background-color: #7aa1be;
+}
+
+.js {
+    background-color: #cec788;
+}
+
+.ts {
+    background-color: #377cc8;
+}
+
+.react {
+    background-color: #61dafb;
+}
+
+.modal {
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal video {
+    height: auto;
+    width: 40%;
+}
+
+#pokemonVideo {
+    /* clip-path: inset(0% 0% 0% 0%); */
+}

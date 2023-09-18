@@ -4,15 +4,18 @@ html {
     padding: 0px;
     font-size: var(--font-size);
     font-family: var(--font-family);
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: var(--color-2);
-    /* overflow: hidden; */
-    /* max-width: 600px; */
+    margin: 0 auto;
 }
 
 .body {
+}
+
+.sectionContainer {
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow: scroll;
+    height: 100vh;
 }
 
 #section1,
@@ -31,7 +34,8 @@ html {
 }
 
 section {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     height: 100vh;
     width: 100vw;
 }
@@ -138,10 +142,10 @@ button {
 
 .modal video {
     height: auto;
-    width: 40%;
+    width: 60%;
 }
 
-#pokemonVideo {
+#pokedexVideo {
     /* clip-path: inset(0% 0% 0% 0%); */
 }
 
@@ -171,7 +175,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 70%;
+    max-width: 50%;
 }
 
 .project {
