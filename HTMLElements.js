@@ -11,10 +11,12 @@ function createModalElement(project) {
 
     const video = createHtml("video", {
         muted: "true",
-        autoplay: "true",
+        autoplay: "false",
         loop: "true",
         id: `${project.id}Video`,
     });
+
+    video;
 
     const source = createHtml("source", {
         src: project.videoSrc,
