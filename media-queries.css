@@ -19,15 +19,58 @@
 @media screen and (min-width: 565px) {
     body,
     section {
-        max-width: 900px;
-        margin: 0 auto;
+        width: 60vw; /* margin: 0 auto; */
+    }
+
+    .sectionContainer {
+        scroll-snap-type: none;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .sectionContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    #section1 {
+        display: none;
+    }
+
+    #section1desktop {
+        height: 33%;
+    }
+    #section1desktop img {
+        padding: 1rem;
+    }
+
+    #section2 {
+        height: fit-content;
+        width: 100%;
+    }
+    #section2 p {
+        overflow: auto;
+    }
+    #section3 {
+        height: max-content;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .projectContainer {
+    }
+
+    #section3 h1 {
+        display: block;
     }
 
     #pokedexVideo {
         clip-path: inset(0% 10% 0% 10%);
     }
     #marsVideo {
-        clip-path: inset(5% 0% 5% 1%);
+        clip-path: inset(2% 0% 5% 1%);
     }
     #todoVideo {
         clip-path: inset(2% 0% 2% 1%);

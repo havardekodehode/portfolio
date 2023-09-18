@@ -6,7 +6,9 @@ addProjectsToContainer();
 
 const imageEl = document.querySelector(".card");
 
-// imageEl.addEventListener()
+// document.body.style.height = "100%";
+// document.body.style.overflow = "hidden";
+// document.querySelector("section").style.scroll = "none";
 
 let startX = 0,
     startY = 0,
@@ -132,38 +134,6 @@ function handleEnd(e) {
         video.currentTime = 0;
     }
 }
-
-// const allProjects = document.querySelectorAll(".wrapper");
-
-// allProjects.forEach(
-//     (p) => (
-//         p.addEventListener("touchstart", handleTouchStart),
-//         p.addEventListener("touchend", handleTouchEnd),
-//         p.addEventListener("touchcancel", handleTouchEnd)
-
-//         // Add event listeners for mouse events
-//     p.addEventListener("mousedown", handleMouseDown);
-//     p.addEventListener("mouseleave", handleMouseLeave);
-//     )
-// );
-
-// function handleTouchStart(e) {
-//     const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
-//     setTimeout(() => {
-//         currentModal.classList.add("visible");
-//         const video = currentModal.querySelector("video");
-//         video.play();
-//     }, 200);
-//     e.preventDefault(); //prevent scroll/zoom
-// }
-
-// function handleTouchEnd(e) {
-//     const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
-//     currentModal.classList.remove("visible");
-//     const video = currentModal.querySelector("video");
-//     video.pause();
-//     video.currentTime = 0;
-// }
 
 //video
 function updateVideoSources() {

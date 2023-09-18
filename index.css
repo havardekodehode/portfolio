@@ -16,6 +16,7 @@ html {
     scroll-snap-type: y mandatory;
     overflow: scroll;
     height: 100vh;
+    width: 100%;
 }
 
 #section1,
@@ -25,6 +26,16 @@ html {
 #dislike,
 #like {
     display: flex;
+}
+
+.desktopHero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.desktopHero img {
+    /* height: 20vh; */
 }
 
 #section1 {
@@ -80,6 +91,10 @@ button {
     border-radius: 100%;
     height: 4rem;
     width: 4rem;
+}
+
+.is-like {
+    width: 100%;
 }
 
 #dislike {
@@ -259,4 +274,7 @@ h1 {
 #section3 {
     width: 100vw;
     position: relative;
+}
+#section3 h1 {
+    display: none;
 }
