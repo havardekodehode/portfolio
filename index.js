@@ -95,6 +95,9 @@ allProjects.forEach((p) => {
 });
 
 function handleStart(e) {
+    if (e.target.tagName === "A") {
+        return;
+    }
     if (e.type === "touchstart") {
         const currentModal = document.getElementById(
             `${e.currentTarget.id}Modal`
