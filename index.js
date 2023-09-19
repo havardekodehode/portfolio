@@ -163,53 +163,53 @@ function handleEnd(e) {
 }
 
 //gif
-function updateGifSources() {
-    const w = window.matchMedia("(min-width: 900px)");
-    const source1 = document.getElementById("pokedexGif");
-    const source2 = document.getElementById("marsGif");
-    const source3 = document.getElementById("todoGif");
-
-    if (w.matches) {
-        source1.src = "/portfolio/images/pokedexDesktop.gif";
-        source2.src = "/portfolio/images/marsDesktop.gif";
-        source3.src = "/portfolio/images/todoDesktop.gif";
-    } else {
-        source1.src = "/portfolio/images/pokedexMobile.gif";
-        source2.src = "/portfolio/images/marsMobile.gif";
-        source3.src = "/portfolio/images/todoMobile.gif";
-    }
-
-    // document.querySelectorAll("video").forEach((v) => {
-    //     v.load();
-    // });
-}
-
-window.addEventListener("load", updateGifSources);
-window.addEventListener("resize", updateGifSources);
-
-//video
-// function updateVideoSources() {
+// function updateGifSources() {
 //     const w = window.matchMedia("(min-width: 900px)");
-//     const source1 = document.getElementById("pokedexVideoSrc");
-//     const source2 = document.getElementById("marsVideoSrc");
-//     const source3 = document.getElementById("todoVideoSrc");
+//     const source1 = document.getElementById("pokedexGif");
+//     const source2 = document.getElementById("marsGif");
+//     const source3 = document.getElementById("todoGif");
 
 //     if (w.matches) {
-//         source1.src = "/videos/pokedexDesktop.mp4";
-//         source2.src = "/videos/marsDesktop.mp4";
-//         source3.src = "/videos/todoDesktop.mp4";
+//         source1.src = "/portfolio/images/pokedexDesktop.gif";
+//         source2.src = "/portfolio/images/marsDesktop.gif";
+//         source3.src = "/portfolio/images/todoDesktop.gif";
 //     } else {
-//         source1.src = "/videos/pokedexMobile.mp4";
-//         source2.src = "/videos/marsMobile.mp4";
-//         source3.src = "/videos/todoMobile.mp4";
+//         source1.src = "/portfolio/images/pokedexMobile.gif";
+//         source2.src = "/portfolio/images/marsMobile.gif";
+//         source3.src = "/portfolio/images/todoMobile.gif";
 //     }
 
-//     document.querySelectorAll("video").forEach((v) => {
-//         v.load();
-//     });
+//     // document.querySelectorAll("video").forEach((v) => {
+//     //     v.load();
+//     // });
 // }
 
-// window.addEventListener("load", updateVideoSources);
-// window.addEventListener("resize", updateVideoSources);
+// window.addEventListener("load", updateGifSources);
+// window.addEventListener("resize", updateGifSources);
+
+//video
+function updateVideoSources() {
+    const w = window.matchMedia("(min-width: 900px)");
+    const source1 = document.getElementById("pokedexVideoSrc");
+    const source2 = document.getElementById("marsVideoSrc");
+    const source3 = document.getElementById("todoVideoSrc");
+
+    if (w.matches) {
+        source1.src = "/portfolio/videos/pokedexDesktop.mp4";
+        source2.src = "/portfolio/videos/marsDesktop.mp4";
+        source3.src = "/portfolio/videos/todoDesktop.mp4";
+    } else {
+        source1.src = "/portfolio/videos/pokedexMobile.mp4";
+        source2.src = "/portfolio/videos/marsMobile.mp4";
+        source3.src = "/portfolio/videos/todoMobile.mp4";
+    }
+
+    document.querySelectorAll("video").forEach((v) => {
+        v.load();
+    });
+}
+
+window.addEventListener("load", updateVideoSources);
+window.addEventListener("resize", updateVideoSources);
 
 // Swtiping
