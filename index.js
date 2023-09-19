@@ -104,8 +104,8 @@ function handleStart(e) {
         );
         setTimeout(() => {
             currentModal.classList.add("visible");
-            const video = currentModal.querySelector("video");
-            video.play();
+            // const video = currentModal.querySelector("video");
+            // video.play();
         }, 200);
         e.preventDefault(); // Prevent scroll/zoom for touch events
     } else if (e.type === "mousedown") {
@@ -113,8 +113,8 @@ function handleStart(e) {
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.add("visible");
-        const video = currentModal.querySelector("video");
-        video.play();
+        // const video = currentModal.querySelector("video");
+        // video.play();
     }
 }
 
@@ -124,19 +124,44 @@ function handleEnd(e) {
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.remove("visible");
-        const video = currentModal.querySelector("video");
-        video.pause();
-        video.currentTime = 0;
+        // const video = currentModal.querySelector("video");
+        // video.pause();
+        // video.currentTime = 0;
     } else if (e.type === "mouseleave") {
         const currentModal = document.getElementById(
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.remove("visible");
-        const video = currentModal.querySelector("video");
-        video.pause();
-        video.currentTime = 0;
+        // const video = currentModal.querySelector("video");
+        // video.pause();
+        // video.currentTime = 0;
     }
 }
+
+//gif
+function updateGifSources() {
+    const w = window.matchMedia("(min-width: 900px)");
+    const source1 = document.getElementById("pokedexGifSrc");
+    const source2 = document.getElementById("marsGifSrc");
+    const source3 = document.getElementById("todoGifSrc");
+
+    if (w.matches) {
+        source1.src = "/videos/pokedexDesktop.mp4";
+        source2.src = "/videos/marsDesktop.mp4";
+        source3.src = "/videos/todoDesktop.mp4";
+    } else {
+        source1.src = "/videos/pokedexMobile.mp4";
+        source2.src = "/videos/marsMobile.mp4";
+        source3.src = "/videos/todoMobile.mp4";
+    }
+
+    document.querySelectorAll("video").forEach((v) => {
+        v.load();
+    });
+}
+
+window.addEventListener("load", updateVideoSources);
+window.addEventListener("resize", updateVideoSources);
 
 //video
 function updateVideoSources() {
