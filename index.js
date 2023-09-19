@@ -95,55 +95,72 @@ allProjects.forEach((p) => {
 });
 
 function handleStart(e) {
-    if (e.target.tagName === "A") {
-        return;
-    }
+    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
     if (e.type === "touchstart") {
-        const currentModal = document.getElementById(
-            `${e.currentTarget.id}Modal`
-        );
         setTimeout(() => {
             currentModal.classList.add("visible");
             const video = currentModal.querySelector("video");
-            video.play();
+            if (video) {
+                video.play();
+            }
+            const gif = currentModal.querySelector(".gif");
+            if (gif) {
+                gif.style.display = "block"; // You can perform actions on .gif here
+            }
         }, 200);
         e.preventDefault(); // Prevent scroll/zoom for touch events
     } else if (e.type === "mousedown") {
-        const currentModal = document.getElementById(
-            `${e.currentTarget.id}Modal`
-        );
         currentModal.classList.add("visible");
         const video = currentModal.querySelector("video");
-        video.play();
+        if (video) {
+            video.play();
+        }
+        const gif = currentModal.querySelector(".gif");
+        if (gif) {
+            gif.style.display = "block"; // You can perform actions on .gif here
+        }
     }
+
+    currentModal.addEventListener("click", () => {
+        currentModal.classList.remove("visible");
+        const video = currentModal.querySelector("video");
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+        const gif = currentModal.querySelector(".gif");
+        if (gif) {
+            gif.style.display = "none";
+        }
+    });
 }
 
 function handleEnd(e) {
-    if (e.type === "touchend" || e.type === "touchcancel") {
-        const currentModal = document.getElementById(
-            `${e.currentTarget.id}Modal`
-        );
+    const currentModal = document.getElementById(`${e.currentTarget.id}Modal`);
+    if (
+        e.type === "touchend" ||
+        e.type === "touchcancel" ||
+        e.type === "mouseleave"
+    ) {
         currentModal.classList.remove("visible");
         const video = currentModal.querySelector("video");
-        video.pause();
-        video.currentTime = 0;
-    } else if (e.type === "mouseleave") {
-        const currentModal = document.getElementById(
-            `${e.currentTarget.id}Modal`
-        );
-        currentModal.classList.remove("visible");
-        const video = currentModal.querySelector("video");
-        video.pause();
-        video.currentTime = 0;
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+        const gif = currentModal.querySelector(".gif");
+        if (gif) {
+            gif.style.display = "none"; // You can hide .gif here
+        }
     }
 }
 
 //gif
 function updateGifSources() {
     const w = window.matchMedia("(min-width: 900px)");
-    const source1 = document.getElementById("pokedexGifSrc");
-    const source2 = document.getElementById("marsGifSrc");
-    const source3 = document.getElementById("todoGifSrc");
+    const source1 = document.getElementById("pokedexGif");
+    const source2 = document.getElementById("marsGif");
+    const source3 = document.getElementById("todoGif");
 
     if (w.matches) {
         source1.src = "/videos/pokedexDesktop.gif";
@@ -155,37 +172,37 @@ function updateGifSources() {
         source3.src = "/videos/todoMobile.gif";
     }
 
-    document.querySelectorAll("video").forEach((v) => {
-        v.load();
-    });
+    // document.querySelectorAll("video").forEach((v) => {
+    //     v.load();
+    // });
 }
 
-// window.addEventListener("load", updateGifSources);
-// window.addEventListener("resize", updateGifSources);
+window.addEventListener("load", updateGifSources);
+window.addEventListener("resize", updateGifSources);
 
 //video
-function updateVideoSources() {
-    const w = window.matchMedia("(min-width: 900px)");
-    const source1 = document.getElementById("pokedexVideoSrc");
-    const source2 = document.getElementById("marsVideoSrc");
-    const source3 = document.getElementById("todoVideoSrc");
+// function updateVideoSources() {
+//     const w = window.matchMedia("(min-width: 900px)");
+//     const source1 = document.getElementById("pokedexVideoSrc");
+//     const source2 = document.getElementById("marsVideoSrc");
+//     const source3 = document.getElementById("todoVideoSrc");
 
-    if (w.matches) {
-        source1.src = "/videos/pokedexDesktop.mp4";
-        source2.src = "/videos/marsDesktop.mp4";
-        source3.src = "/videos/todoDesktop.mp4";
-    } else {
-        source1.src = "/videos/pokedexMobile.mp4";
-        source2.src = "/videos/marsMobile.mp4";
-        source3.src = "/videos/todoMobile.mp4";
-    }
+//     if (w.matches) {
+//         source1.src = "/videos/pokedexDesktop.mp4";
+//         source2.src = "/videos/marsDesktop.mp4";
+//         source3.src = "/videos/todoDesktop.mp4";
+//     } else {
+//         source1.src = "/videos/pokedexMobile.mp4";
+//         source2.src = "/videos/marsMobile.mp4";
+//         source3.src = "/videos/todoMobile.mp4";
+//     }
 
-    document.querySelectorAll("video").forEach((v) => {
-        v.load();
-    });
-}
+//     document.querySelectorAll("video").forEach((v) => {
+//         v.load();
+//     });
+// }
 
-window.addEventListener("load", updateVideoSources);
-window.addEventListener("resize", updateVideoSources);
+// window.addEventListener("load", updateVideoSources);
+// window.addEventListener("resize", updateVideoSources);
 
 // Swtiping

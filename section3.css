@@ -4,6 +4,7 @@
     box-sizing: border-box;
     width: 100vw;
     position: relative;
+    overflow-x: hidden;
     /* background: radial-gradient(rgba(0, 0, 0, 0.4), var(--color-1)); */
 }
 
@@ -26,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 50%;
+    min-width: 17rem;
 }
 
 .project {
@@ -89,7 +90,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
@@ -101,6 +102,20 @@
 .modal video {
     height: auto;
     width: 40%;
+}
+.modal img {
+    height: 80%;
+    width: 80%;
+}
+
+#pokedexGif {
+    clip-path: inset(3% 1% 0% 0%);
+}
+#marsGif {
+    clip-path: inset(1% 0% 5% 1%);
+}
+#todoGif {
+    clip-path: inset(2% 0% 2% 1%);
 }
 
 #pokemonVideo {

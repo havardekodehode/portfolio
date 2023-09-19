@@ -9,27 +9,33 @@ function createModalElement(project) {
         id: `${project.id}Modal`,
     });
 
-    const video = createHtml("video", {
-        id: `${project.id}Video`,
-        autoplay: "false",
-        loop: "false",
-        muted: "true",
+    // const video = createHtml("video", {
+    //     id: `${project.id}Video`,
+    //     autoplay: "false",
+    //     loop: "false",
+    //     muted: "true",
+    // });
+
+    // const source = createHtml("source", {
+    //     src: project.videoSrc,
+    //     type: "video/mp4",
+    //     id: `${project.id}VideoSrc`,
+    // });
+
+    // const fallback = document.createTextNode(
+    //     "Your browser does not support this video format"
+    // );
+
+    // video.appendChild(source);
+    // video.appendChild(fallback);
+
+    const image = createHtml("img", {
+        src: project.gifSrc,
+        alt: `Gif showing preivew of ${project.name} website`,
+        id: `${project.id}Gif`,
     });
 
-    const source = createHtml("source", {
-        src: project.videoSrc,
-        type: "video/mp4",
-        id: `${project.id}VideoSrc`,
-    });
-
-    const fallback = document.createTextNode(
-        "Your browser does not support this video format"
-    );
-
-    video.appendChild(source);
-    video.appendChild(fallback);
-
-    modal.appendChild(video);
+    modal.appendChild(image);
 
     return modal;
 }

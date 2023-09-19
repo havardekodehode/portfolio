@@ -75,9 +75,29 @@
     #todoVideo {
         clip-path: inset(2% 0% 2% 1%);
     }
+    #pokedexGif {
+        clip-path: inset(0% 10% 0% 10%);
+    }
+    #marsGif {
+        clip-path: inset(1% 0% 5% 1%);
+    }
+    #todoGif {
+        clip-path: inset(2% 0% 2% 1%);
+    }
+
+    .modal {
+        height: 60%;
+        width: auto;
+    }
+
     .modal video {
         height: auto;
         width: 40%;
+    }
+
+    .modal img {
+        height: auto;
+        width: 90%;
     }
 }
 @media screen and (min-width: 765px) {

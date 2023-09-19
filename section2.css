@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 #section2 p {
@@ -12,6 +14,11 @@
     line-height: 24px;
     max-height: 80vh;
     overflow: scroll;
-
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     box-sizing: border-box;
+}
+
+#section2 p::-webkit-scrollbar {
+    display: none;
 }
