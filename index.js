@@ -146,13 +146,13 @@ function updateGifSources() {
     const source3 = document.getElementById("todoGifSrc");
 
     if (w.matches) {
-        source1.src = "/videos/pokedexDesktop.mp4";
-        source2.src = "/videos/marsDesktop.mp4";
-        source3.src = "/videos/todoDesktop.mp4";
+        source1.src = "/videos/pokedexDesktop.gif";
+        source2.src = "/videos/marsDesktop.gif";
+        source3.src = "/videos/todoDesktop.gif";
     } else {
-        source1.src = "/videos/pokedexMobile.mp4";
-        source2.src = "/videos/marsMobile.mp4";
-        source3.src = "/videos/todoMobile.mp4";
+        source1.src = "/videos/pokedexMobile.gif";
+        source2.src = "/videos/marsMobile.gif";
+        source3.src = "/videos/todoMobile.gif";
     }
 
     document.querySelectorAll("video").forEach((v) => {
@@ -160,8 +160,8 @@ function updateGifSources() {
     });
 }
 
-window.addEventListener("load", updateVideoSources);
-window.addEventListener("resize", updateVideoSources);
+// window.addEventListener("load", updateGifSources);
+// window.addEventListener("resize", updateGifSources);
 
 //video
 function updateVideoSources() {
