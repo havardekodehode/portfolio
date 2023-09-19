@@ -28,6 +28,7 @@ function createModalElement(project) {
 
     // video.appendChild(source);
     // video.appendChild(fallback);
+    console.log(project.gifSrc);
 
     const image = createHtml("img", {
         src: project.gifSrc,

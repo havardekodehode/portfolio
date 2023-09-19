@@ -65,7 +65,7 @@ function complete() {
         inline: "start",
     });
     setTimeout(() => {
-        document.getElementById("section1").remove();
+        document.getElementById("section1").style.display = "none";
     }, 2000);
 }
 
@@ -163,13 +163,13 @@ function updateGifSources() {
     const source3 = document.getElementById("todoGif");
 
     if (w.matches) {
-        source1.src = "/videos/pokedexDesktop.gif";
-        source2.src = "/videos/marsDesktop.gif";
-        source3.src = "/videos/todoDesktop.gif";
+        source1.src = "/images/pokedexDesktop.gif";
+        source2.src = "/images/marsDesktop.gif";
+        source3.src = "/images/todoDesktop.gif";
     } else {
-        source1.src = "/videos/pokedexMobile.gif";
-        source2.src = "/videos/marsMobile.gif";
-        source3.src = "/videos/todoMobile.gif";
+        source1.src = "/images/pokedexMobile.gif";
+        source2.src = "/images/marsMobile.gif";
+        source3.src = "/images/todoMobile.gif";
     }
 
     // document.querySelectorAll("video").forEach((v) => {
