@@ -104,8 +104,8 @@ function handleStart(e) {
         );
         setTimeout(() => {
             currentModal.classList.add("visible");
-            // const video = currentModal.querySelector("video");
-            // video.play();
+            const video = currentModal.querySelector("video");
+            video.play();
         }, 200);
         e.preventDefault(); // Prevent scroll/zoom for touch events
     } else if (e.type === "mousedown") {
@@ -113,8 +113,8 @@ function handleStart(e) {
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.add("visible");
-        // const video = currentModal.querySelector("video");
-        // video.play();
+        const video = currentModal.querySelector("video");
+        video.play();
     }
 }
 
@@ -124,17 +124,17 @@ function handleEnd(e) {
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.remove("visible");
-        // const video = currentModal.querySelector("video");
-        // video.pause();
-        // video.currentTime = 0;
+        const video = currentModal.querySelector("video");
+        video.pause();
+        video.currentTime = 0;
     } else if (e.type === "mouseleave") {
         const currentModal = document.getElementById(
             `${e.currentTarget.id}Modal`
         );
         currentModal.classList.remove("visible");
-        // const video = currentModal.querySelector("video");
-        // video.pause();
-        // video.currentTime = 0;
+        const video = currentModal.querySelector("video");
+        video.pause();
+        video.currentTime = 0;
     }
 }
 
