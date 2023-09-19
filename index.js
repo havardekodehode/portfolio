@@ -41,7 +41,13 @@ function onPointerDown({ clientX, clientY }) {
 function onPointerMove({ clientX, clientY }) {
     moveX = clientX - startX;
     moveY = clientY - startY;
-    setTransform(moveX, moveY, (moveX / innerWidth) * 50);
+    const viewportWidth = window.innerWidth;
+
+    if (moveX < -viewportWidth / 2.2 || moveX > viewportWidth / 2.2) {
+        complete();
+    } else {
+        setTransform(moveX, moveY, (moveX / viewportWidth) * 50);
+    }
 }
 
 function onPointerUp() {
@@ -51,6 +57,7 @@ function onPointerUp() {
     if (Math.abs(moveX) > card.clientWidth / 2) {
         card.removeEventListener("pointerdown", onPointerDown);
         complete();
+        cancel();
     } else {
         cancel();
     }
@@ -65,7 +72,7 @@ function complete() {
         inline: "start",
     });
     setTimeout(() => {
-        document.getElementById("section1").style.display = "none";
+        // document.getElementById("section1").style.display = "none";
     }, 2000);
 }
 
