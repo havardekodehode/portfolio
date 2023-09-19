@@ -35,6 +35,10 @@
         display: none;
     }
 
+    .desktopHero {
+        display: flex;
+    }
+
     #section1 {
         display: none;
     }
@@ -59,7 +63,8 @@
         overflow: visible;
     }
 
-    .projectContainer {
+    .wrapper {
+        min-width: 23rem;
     }
 
     #section3 h1 {
@@ -92,12 +97,17 @@
 
     .modal video {
         height: auto;
-        width: 40%;
+        width: 90%;
     }
 
     .modal img {
         height: auto;
         width: 90%;
+    }
+
+    .projectsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 @media screen and (min-width: 765px) {
