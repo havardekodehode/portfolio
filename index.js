@@ -170,13 +170,13 @@ function updateGifSources() {
     const source3 = document.getElementById("todoGif");
 
     if (w.matches) {
-        source1.src = "/images/pokedexDesktop.gif";
-        source2.src = "/images/marsDesktop.gif";
-        source3.src = "/images/todoDesktop.gif";
+        source1.src = "/portfolio/images/pokedexDesktop.gif";
+        source2.src = "/portfolio/images/marsDesktop.gif";
+        source3.src = "/portfolio/images/todoDesktop.gif";
     } else {
-        source1.src = "/images/pokedexMobile.gif";
-        source2.src = "/images/marsMobile.gif";
-        source3.src = "/images/todoMobile.gif";
+        source1.src = "/portfolio/images/pokedexMobile.gif";
+        source2.src = "/portfolio/images/marsMobile.gif";
+        source3.src = "/portfolio/images/todoMobile.gif";
     }
 
     // document.querySelectorAll("video").forEach((v) => {
