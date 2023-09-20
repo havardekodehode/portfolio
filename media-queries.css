@@ -2,18 +2,6 @@
     .modal {
         scale: 1;
     }
-
-    #pokedexVideo {
-        clip-path: inset(13% 1% 1% 0%);
-    }
-    #marsVideo {
-        clip-path: inset(1% 1% 1% 1%);
-    }
-    #todoVideo {
-        clip-path: inset(0% 0% 0% 0%);
-    }
-}
-@media screen and (min-width: 475px) {
 }
 
 @media screen and (min-width: 768px) {

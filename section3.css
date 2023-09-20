@@ -101,18 +101,19 @@
     height: auto;
     width: 40%;
 }
-.modal img {
-    height: 80%;
-    width: 80%;
-}
+/* 
+#pokedexVideo {
+    height: 75%;
+    width: auto%;
+} */
 
-#pokedexGif {
-    clip-path: inset(3% 1% 0% 0%);
+#pokedexVideo {
+    clip-path: inset(1% 1% 0% 0%);
 }
-#marsGif {
+#marsVideo {
     clip-path: inset(1% 0% 5% 1%);
 }
-#todoGif {
+#todoVideo {
     clip-path: inset(2% 0% 2% 1%);
 }
 
