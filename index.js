@@ -96,6 +96,7 @@ const allProjects = document.querySelectorAll(".wrapper");
 allProjects.forEach((p) => {
     p.addEventListener("mousedown", handleStart);
     p.addEventListener("touchstart", handleStart);
+    p.addEventListener("touchstart", handleStart);
     p.addEventListener("mouseleave", handleEnd);
     p.addEventListener("touchend", handleEnd);
     p.addEventListener("touchcancel", handleEnd);
@@ -140,6 +141,13 @@ function handleStart(e) {
             gif.style.display = "none";
         }
     });
+}
+
+function handleMove(e, startX, startY) {
+    const touchX = e.touches[0].clientX;
+    const touchY = e.touches[0].clientY;
+    e.targetTouches[0].moved =
+        Math.abs(touchX - startX) > 10 || Math.abs(touchY - startY) > 10;
 }
 
 function handleEnd(e) {

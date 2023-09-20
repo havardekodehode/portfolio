@@ -42,15 +42,15 @@
     }
 
     #section1 {
-        /* display: none; */
+        display: none;
     }
 
     #section1desktop {
         height: 33%;
-        /* padding-top: 4rem; */
+        padding-top: 4rem;
     }
     #section1desktop img {
-        /* padding: 1rem; */
+        padding: 1rem;
     }
 
     #section2 {
