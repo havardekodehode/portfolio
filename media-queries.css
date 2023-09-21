@@ -47,6 +47,8 @@
     }
     #section2 p {
         /* overflow: auto; */
+        overflow: visible;
+        height: fit-content;
     }
     #section3 {
         height: max-content;
@@ -98,7 +100,7 @@
 
     .projectsContainer {
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
 }
 @media screen and (min-width: 765px) {
