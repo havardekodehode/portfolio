@@ -7,6 +7,10 @@ function createModalElement(project) {
         id: `${project.id}Modal`,
     });
 
+    const videoContainer = createHtml("div", {
+        className: "video-container",
+    });
+
     const video = createHtml("video", {
         id: `${project.id}Video`,
         autoplay: "false",
@@ -20,14 +24,29 @@ function createModalElement(project) {
         id: `${project.id}VideoSrc`,
     });
 
+    const exitButton = createHtml("button", {
+        id: `${project.id}`,
+        className: "exit-button",
+        innerText: "Back",
+    });
+
     const fallback = document.createTextNode(
         "Your browser does not support this video format"
     );
 
+    exitButton.addEventListener("click", () => {
+        modal.classList.remove("visible");
+        video.pause();
+        video.currentTime = 0;
+    });
+
     video.appendChild(source);
     video.appendChild(fallback);
 
-    modal.appendChild(video);
+    videoContainer.appendChild(video);
+    videoContainer.appendChild(exitButton);
+
+    modal.appendChild(videoContainer);
 
     return modal;
 }
