@@ -2,9 +2,133 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-1);
+    font-family: var(--font-family);
 }
 
-/* header {
+section {
     height: 100vh;
     width: 100vw;
-} */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+/* About me section */
+
+.titleAndImage {
+    gap: 3rem;
+    height: 5rem;
+    padding: 1rem;
+}
+
+.titleAndImage img {
+    height: 100%;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* Project section */
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.projectsContainer h3 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 17rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem 3rem;
+    width: 18rem;
+}
+
+.project img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.techContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tech {
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.html {
+    background-color: #c96f58;
+}
+
+.css {
+    background-color: #7aa1be;
+}
+
+.js {
+    background-color: #cec788;
+}
+
+.ts {
+    background-color: #377cc8;
+}
+
+.react {
+    background-color: #61dafb;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal video {
+    height: auto;
+    width: 40%;
+}
+
+#pokedexVideo {
+    clip-path: inset(1% 1% 0% 0%);
+}
+#marsVideo {
+    clip-path: inset(1% 0% 5% 1%);
+}
+#todoVideo {
+    clip-path: inset(2% 0% 2% 1%);
+}

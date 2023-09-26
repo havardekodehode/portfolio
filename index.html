@@ -5,12 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="index.css" />
-
-        <link rel="stylesheet" href="mobileHeader.css" />
         <link rel="stylesheet" href="variables.css" />
-        <link rel="stylesheet" href="swipe.css" />
         <link rel="stylesheet" href="layout.css" />
         <link rel="stylesheet" href="structure.css" />
+        <link rel="stylesheet" href="mobileHeader.css" />
 
         <!-- <link rel="stylesheet" href="media-queries.css" /> -->
         <script src="index copy.js" type="module" defer></script>
@@ -47,25 +45,22 @@
                 <img src="images/portrait.jpg" alt="" srcset="" />
             </div>
         </header>
-
         <main>
             <div class="sectionContainer">
-                <section id="section1">
-                    <h1>Om meg</h1>
+                <section class="aboutMe flex-col alig-cen" id="section1">
+                    <div class="titleAndImage flex-row alig-cen">
+                        <h2>Om meg</h2>
+                        <img src="images/portrait.jpg" alt="" />
+                    </div>
                     <p>
                         Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel
                         og bor i Bergen.<br /><br />
 
                         For tiden deltar jeg på den intensive bootcampen
-                        Kodehode, hvor til nå har fokusert på frontend
-                        utvikling, men hvor vi nå skal se mer på backend.
-                        <!-- mock -->
-                        <!-- For tiden har jeg praksis hos DNB som Junior utvikler, hvor
-            jeg er en del av et team som jobber med universell utforming i
-            DNBs mobil app.<br /><br /> -->
-
-                        I Bergen har jeg alt jeg trenger for å trives: fiske,
-                        fjellturer, gaming og Premier league kanalene.<br /><br />
+                        Kodehode, hvor vi til nå har jobbet med på frontend
+                        utvikling, men hvor vi nå i innspurten skal se mer på
+                        backend. I Bergen har jeg alt jeg trenger for å trives:
+                        fiske, fjellturer, gaming og Premier league kanalene.<br /><br />
 
                         Etter å ha deltatt på Kodehode kurset, har jeg iløpet av
                         de siste 5 månedene dyppet tærne mine i HTML, CSS, Git,
@@ -80,10 +75,10 @@
                     </p>
                 </section>
                 <section id="section2">
-                    <h1>Prosjekter</h1>
+                    <h2>Prosjekter</h2>
                     <div class="projectsContainer"></div>
                 </section>
-                <section id="section3"></section>
+                <!-- <section id="section3"></section> -->
             </div>
         </main>
         <footer></footer>

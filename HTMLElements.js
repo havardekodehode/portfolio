@@ -1,8 +1,6 @@
 import { projects } from "./data.js";
 import { createHtml } from "./utils.js";
 
-// Function to create a modal element
-
 function createModalElement(project) {
     const modal = createHtml("div", {
         className: "modal",
@@ -29,19 +27,11 @@ function createModalElement(project) {
     video.appendChild(source);
     video.appendChild(fallback);
 
-    // const image = createHtml("img", {
-    //     src: project.gifSrc,
-    //     alt: `Gif showing preivew of ${project.name} website`,
-    //     id: `${project.id}Gif`,
-    // });
-
-    // modal.appendChild(image);
     modal.appendChild(video);
 
     return modal;
 }
 
-// Function to create a project element
 function createProjectElement(project) {
     const wrapperElement = createHtml("div", {
         className: "wrapper",
@@ -51,7 +41,7 @@ function createProjectElement(project) {
         className: "project",
     });
 
-    const projectName = createHtml("h2", {
+    const projectName = createHtml("h3", {
         textContent: `${project.name}`,
     });
 
@@ -83,7 +73,6 @@ function createProjectElement(project) {
     return wrapperElement;
 }
 
-// Function to add projects to the projects container
 export function addProjectsToContainer() {
     const projectsContainer = document.querySelector(".projectsContainer");
 

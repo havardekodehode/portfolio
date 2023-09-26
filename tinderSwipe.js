@@ -1,5 +1,7 @@
 //Tinder swipe
 
+document.body.style.overflow = "hidden";
+
 let startX = 0,
     startY = 0,
     moveX = 0,
@@ -65,6 +67,7 @@ function complete() {
 
     setTimeout(() => {
         document.querySelector("header").style.display = "none";
+        document.body.style.overflow = "";
         window.scrollTo(0, scrollYBefore - 100);
     }, 300);
 }
