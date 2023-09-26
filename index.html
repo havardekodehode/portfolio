@@ -4,33 +4,32 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="variables.css" />
         <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" href="section1.css" />
-        <link rel="stylesheet" href="section3.css" />
-        <link rel="stylesheet" href="structure.css" />
+
+        <link rel="stylesheet" href="mobileHeader.css" />
+        <link rel="stylesheet" href="variables.css" />
         <link rel="stylesheet" href="swipe.css" />
-        <link rel="stylesheet" href="media-queries.css" />
-        <script src="index.js" type="module" defer></script>
+        <link rel="stylesheet" href="layout.css" />
+        <link rel="stylesheet" href="structure.css" />
+
+        <!-- <link rel="stylesheet" href="media-queries.css" /> -->
+        <script src="index copy.js" type="module" defer></script>
     </head>
     <body>
-        <div class="sectionContainer">
+        <header>
+            <div class="container flex-col">
+                <div class="cardContainer flex-row just-cen">
+                    <div class="card flex-col just-end alig-sta swipeHint">
+                        <div class="is-like">LIKE</div>
 
-            <section class="desktopHero" id="section1desktop">
-                <img src="images/portrait.jpg" alt="" srcset="">
-            </section>
-            </section>
-            <section class="cardContainer" id="section1">
-                <div class="card">
-                    <div class="is-like">LIKE</div>
-
-                    <div class="info">
-                        <h4>Håvard Einarsen</h4>
-                        <h5>27, Full stack deveveloper</h5>
+                        <div class="info">
+                            <h4>Håvard Einarsen</h4>
+                            <h5>27, Full stack deveveloper</h5>
+                        </div>
                     </div>
                 </div>
 
-                <div class="actions">
+                <div class="actions flex-row just-cen alig-cen">
                     <button id="dislike">
                         <img src="images/x.svg" alt="Image of an X" />
                     </button>
@@ -42,42 +41,51 @@
                         />
                     </button>
                 </div>
-            </section>
-            <section id="section2">
-                <h1>Om meg</h1>
-                <p>
-                    Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel og
-                    bor i Bergen.<br /><br />
+            </div>
 
-                    For tiden deltar jeg på den intensive bootcampen Kodehode, hvor 
-                    til nå har fokusert på frontend utvikling, men hvor vi nå skal se
-                    mer på backend.
-                    <!-- mock -->
-                    <!-- For tiden har jeg praksis hos DNB som Junior utvikler, hvor
-                    jeg er en del av et team som jobber med universell utforming i
-                    DNBs mobil app.<br /><br /> -->
+            <div class="desktopHero" id="section1desktop">
+                <img src="images/portrait.jpg" alt="" srcset="" />
+            </div>
+        </header>
 
-                    I Bergen har jeg alt jeg trenger for å trives: fiske,
-                    fjellturer, gaming og Premier league kanalene.<br /><br />
+        <main>
+            <div class="sectionContainer">
+                <section id="section1">
+                    <h1>Om meg</h1>
+                    <p>
+                        Hei! Mitt navn er Håvard Einarsen. Jeg er 27 år gammel
+                        og bor i Bergen.<br /><br />
 
-                    Etter å ha deltatt på Kodehode kurset, har
-                    jeg iløpet av de siste 5 månedene dyppet tærne mine i HTML,
-                    CSS, Git, JS, TS, React. Jeg føler meg
-                    trygg med disse verktøyene og du kan se hvordan jeg har løst
-                    problemer med dem på mine prosjekter i Github.<br /><br />
-                    
-                    Jeg gleder meg til nye utfordringer,
-                    forbedre meg ytterligere og utvikle morgendagens
-                    applikasjoner. Hvis du ønsker meg med i teamet ditt, er du
-                    velkommen til å ta kontakt med meg her. Takk for
-                    interessen.
-                </p>
-            </section>
-            <section id="section3">
-                <h1>Prosjekter</h1>
-                <div class="projectsContainer"></div>
-            </section>
-            <section id="section4"></section>
-        </div>
+                        For tiden deltar jeg på den intensive bootcampen
+                        Kodehode, hvor til nå har fokusert på frontend
+                        utvikling, men hvor vi nå skal se mer på backend.
+                        <!-- mock -->
+                        <!-- For tiden har jeg praksis hos DNB som Junior utvikler, hvor
+            jeg er en del av et team som jobber med universell utforming i
+            DNBs mobil app.<br /><br /> -->
+
+                        I Bergen har jeg alt jeg trenger for å trives: fiske,
+                        fjellturer, gaming og Premier league kanalene.<br /><br />
+
+                        Etter å ha deltatt på Kodehode kurset, har jeg iløpet av
+                        de siste 5 månedene dyppet tærne mine i HTML, CSS, Git,
+                        JS, TS, React. Jeg føler meg trygg med disse verktøyene
+                        og du kan se hvordan jeg har løst problemer med dem på
+                        mine prosjekter i Github.<br /><br />
+
+                        Jeg gleder meg til nye utfordringer, forbedre meg
+                        ytterligere og utvikle morgendagens applikasjoner. Hvis
+                        du ønsker meg med i teamet ditt, er du velkommen til å
+                        ta kontakt med meg her. Takk for interessen.
+                    </p>
+                </section>
+                <section id="section2">
+                    <h1>Prosjekter</h1>
+                    <div class="projectsContainer"></div>
+                </section>
+                <section id="section3"></section>
+            </div>
+        </main>
+        <footer></footer>
     </body>
 </html>
