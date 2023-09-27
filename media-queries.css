@@ -3,3 +3,51 @@
         font-size: 12px;
     }
 }
+@media screen and (min-width: 768px) {
+    header {
+        display: block;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .desktopHero {
+        display: flex;
+        height: 20vh;
+        width: 100vw;
+        gap: 6rem;
+        border-bottom: #f9f871 solid 1rem;
+    }
+
+    .desktopHero h2 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .desktopHero img {
+        height: 80%;
+    }
+
+    .sectionContainer {
+        height: 80vh;
+    }
+
+    .sectionContainer > section {
+        height: 80vh;
+        padding: 6rem 8rem;
+    }
+
+    .sectionContainer #section2 {
+        padding: 0 10rem;
+    }
+
+    .titleAndImage img {
+        display: none;
+    }
+
+    .projectsContainer {
+        flex-direction: row;
+    }
+}

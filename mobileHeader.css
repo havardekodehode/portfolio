@@ -4,7 +4,6 @@
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    /* padding: 1rem 1rem; */
 }
 
 .cardContainer {
@@ -155,7 +154,7 @@
 }
 
 .card .nope::after {
-    content: "Not interested anyways";
+    content: "Hired";
     color: #fb4f68;
     border: 0.1em solid #fb4f68;
     padding: 0.6rem;
