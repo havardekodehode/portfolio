@@ -20,6 +20,7 @@ function handleToggle(e) {
     video.play();
 }
 
+//Updating video source
 function updateVideoSources() {
     const w = window.matchMedia("(min-width: 768px)");
     const source1 = document.getElementById("pokedexVideoSrc");
