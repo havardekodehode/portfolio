@@ -5,6 +5,23 @@ const card = document.querySelector(".card");
 initCard(card);
 addProjectsToContainer();
 
+//Navbar functionality
+const liEls = document.querySelectorAll(".navBar ul li");
+
+liEls.forEach((li) => {
+    li.addEventListener("click", () => {
+        const targetElement = document.getElementById(
+            li.getAttribute("data-target")
+        );
+        if (targetElement)
+            targetElement.parentElement.scrollTo({
+                top: `${targetElement.offsetTop}`,
+                behavior: "smooth",
+            });
+        // if (targetElement) targetElement.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
 //Modal on mousedown
 const allProjects = document.querySelectorAll(".wrapper");
 

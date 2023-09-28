@@ -40,17 +40,32 @@
                 </div>
             </div>
 
-            <div
-                class="desktopHero flex-row just-cen alig-cen"
-                id="section1desktop"
-            >
-                <img src="images/portrait.jpg" alt="" srcset="" />
-                <h2>Håvard Einarsen<br />Full-stack Developer</h2>
+            <div class="desktopHero flex-col just-sta" id="section1desktop">
+                <div class="imageAndName flex-row just-cen alig-cen">
+                    <img src="images/portrait.jpg" alt="" srcset="" />
+                    <h2>Håvard Einarsen<br />Full-stack Developer</h2>
+                </div>
+                <div class="navBar">
+                    <ul>
+                        <li data-target="section1" class="section1link">
+                            Om meg
+                        </li>
+                        <li data-target="section2" class="section2link">
+                            Projeskter
+                        </li>
+                        <li data-target="section3" class="section3link">
+                            Kontakt
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
             <div class="sectionContainer">
-                <section class="aboutMe flex-col alig-cen" id="section1">
+                <section
+                    class="aboutMe flex-col alig-cen just-cen"
+                    id="section1"
+                >
                     <div class="titleAndImage flex-row alig-cen">
                         <h2>Om meg</h2>
                         <img src="images/portrait.jpg" alt="" />
