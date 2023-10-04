@@ -79,7 +79,7 @@ function complete() {
     }, 600);
 
     setTimeout(() => {
-        document.querySelector("header").style.display = "none";
+        document.querySelector(".container").style.display = "none";
         document.body.style.overflow = "";
         window.scrollTo(0, scrollYBefore - 100);
     }, 900);

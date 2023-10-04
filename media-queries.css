@@ -2,6 +2,10 @@
     :root {
         font-size: 12px;
     }
+
+    .desktopHero {
+        display: none;
+    }
 }
 @media screen and (min-width: 768px) {
     header {
@@ -48,11 +52,15 @@
         justify-content: center;
         gap: 1rem;
         list-style-type: none;
+        padding: 1rem;
     }
 
-    .navBar ul li a {
-        text-decoration: none;
-        color: inherit;
+    .navBar ul li {
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+    .navBar ul li:hover {
+        background-color: rgba(0, 0, 0, 0.1);
     }
 
     .active {
@@ -63,21 +71,22 @@
     /* sections */
 
     .sectionContainer {
-        height: 80vh;
+        min-height: 80vh;
     }
 
     .sectionContainer > section {
-        height: 80vh;
+        min-height: 80vh;
         /* padding: 6rem 8rem; */
         margin: 0 auto;
         max-width: 59rem;
     }
 
     .sectionContainer #section1 {
-        padding-bottom: 4rem;
+        /* padding-bottom: 10rem; */
     }
     .sectionContainer #section2 {
         padding: 0 10rem;
+        padding-bottom: 10rem;
     }
 
     .titleAndImage img {
@@ -86,5 +95,10 @@
 
     .projectsContainer {
         flex-direction: row;
+    }
+
+    .modal {
+        width: 100%;
+        height: 80%;
     }
 }

@@ -2,9 +2,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-2);
-    /* background-color: var(--color-2); */
     font-family: var(--font-family);
-    overflow: hidden;
+    font-size: var(--font-size);
 }
 
 section {
@@ -16,6 +15,10 @@ section {
 
 .aboutMe {
     padding: 1rem 2rem;
+}
+.aboutMe p {
+    height: 50vh;
+    text-overflow: ellipsis;
 }
 
 /* About me section */
@@ -37,7 +40,7 @@ h2 {
 /* Project section */
 
 .projects {
-    position: relative;
+    /* position: relative; */
 }
 
 .projectsContainer {
@@ -46,20 +49,13 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
     height: 100%;
 }
 
 .projectsContainer h3 {
     margin: 0;
     white-space: nowrap;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-width: 17rem; */
 }
 
 .project {
@@ -70,7 +66,7 @@ h2 {
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 1rem 3rem;
-    width: 13rem;
+    min-width: 25rem;
 }
 
 .project img {
@@ -81,10 +77,12 @@ h2 {
 .techContainer {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
 }
 
 .tech {
+    font-size: clamp(0.3rem, 0.6rem, 1rem);
     border-radius: 1rem;
     padding: 0.1rem 0.5rem;
 }
@@ -133,8 +131,7 @@ h2 {
 }
 
 .video-container {
-    /* position: relative; */
-    width: 80%; /* Adjust as needed */
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-end;

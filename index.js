@@ -18,7 +18,6 @@ liEls.forEach((li) => {
                 top: `${targetElement.offsetTop}`,
                 behavior: "smooth",
             });
-        // if (targetElement) targetElement.scrollIntoView({ behavior: "smooth" });
     });
 });
 
@@ -30,6 +29,7 @@ allProjects.forEach((p) => {
 });
 
 function handleToggle(e) {
+    if (e.target instanceof HTMLAnchorElement) return;
     const projectId = e.currentTarget.id;
     const currentModal = document.getElementById(`${projectId}Modal`);
     const video = currentModal.querySelector("video");
@@ -70,3 +70,13 @@ function updateVideoSources() {
 
 window.addEventListener("load", updateVideoSources);
 window.addEventListener("resize", updateVideoSources);
+
+//Resize tech elements of project, when they overflow
+const techContainer = document.querySelector(".techContainer");
+const techContainerWidth = techContainer.offsetWidth;
+let allTechsWidth = 0;
+techContainer.forEach((element) => (allTechsWidth += element.offsetWidth));
+
+if (allTechsWidth > techContainerWidth) {
+    tech;
+}
