@@ -6,6 +6,11 @@ body {
     font-size: var(--font-size);
 }
 
+.sectionContainer{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
 section {
     height: 100vh;
     width: 100vw;
@@ -17,8 +22,10 @@ section {
     padding: 1rem 2rem;
 }
 .aboutMe p {
-    height: 50vh;
-    text-overflow: ellipsis;
+    /* height: 50vh; */
+    overflow: hidden;
+/* white-space: nowrap; */
+    text-overflow: "---"
 }
 
 /* About me section */
@@ -51,6 +58,7 @@ h2 {
     text-align: center;
     gap: 2rem;
     height: 100%;
+    /* padding: 2rem; */
 }
 
 .projectsContainer h3 {

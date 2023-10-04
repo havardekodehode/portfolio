@@ -52,12 +52,10 @@ function createModalElement(project) {
 }
 
 function createProjectElement(project) {
-    // const wrapperElement = createHtml("div", {
-    //     className: "wrapper",
-    //     id: project.id,
-    // });
+  
     const projectElement = createHtml("div", {
         className: "project",
+        id: project.id
     });
 
     const projectName = createHtml("h3", {
@@ -87,10 +85,8 @@ function createProjectElement(project) {
     });
 
     projectElement.append(projectName, projectImage, techContainer, githubLink);
-    // wrapperElement.appendChild(projectElement);
 
     return projectElement;
-    // return wrapperElement;
 }
 
 export function addProjectsToContainer() {

@@ -22,7 +22,8 @@ liEls.forEach((li) => {
 });
 
 //Modal on mousedown
-const allProjects = document.querySelectorAll(".wrapper");
+const allProjects = document.querySelectorAll(".project");
+console.log(allProjects);
 
 allProjects.forEach((p) => {
     p.addEventListener("click", handleToggle);
@@ -31,6 +32,7 @@ allProjects.forEach((p) => {
 function handleToggle(e) {
     if (e.target instanceof HTMLAnchorElement) return;
     const projectId = e.currentTarget.id;
+    console.log(projectId); 
     const currentModal = document.getElementById(`${projectId}Modal`);
     const video = currentModal.querySelector("video");
     currentModal.classList.add("visible");
@@ -72,11 +74,11 @@ window.addEventListener("load", updateVideoSources);
 window.addEventListener("resize", updateVideoSources);
 
 //Resize tech elements of project, when they overflow
-const techContainer = document.querySelector(".techContainer");
-const techContainerWidth = techContainer.offsetWidth;
-let allTechsWidth = 0;
-techContainer.forEach((element) => (allTechsWidth += element.offsetWidth));
+// const techContainer = document.querySelector(".techContainer");
+// const techContainerWidth = techContainer.offsetWidth;
+// let allTechsWidth = 0;
+// techContainer.forEach((element) => (allTechsWidth += element.offsetWidth));
 
-if (allTechsWidth > techContainerWidth) {
-    tech;
-}
+// if (allTechsWidth > techContainerWidth) {
+//     tech;
+// }
