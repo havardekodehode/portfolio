@@ -14,9 +14,10 @@ liEls.forEach((li) => {
             li.getAttribute("data-target")
         );
         if (targetElement)
-            targetElement.parentElement.scrollTo({
-                top: `${targetElement.offsetTop}`,
+            targetElement.scrollIntoView({
+                // top: `${targetElement.offsetTop}`,
                 behavior: "smooth",
+                block: "start"
             });
     });
 });

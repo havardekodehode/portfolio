@@ -1,7 +1,7 @@
 // //Tinder swipe
 
 // Tinder swipe
-document.body.style.overflow = "hidden";
+// document.body.style.overflow = "hidden";
 
 let startX = 0,
     startY = 0,

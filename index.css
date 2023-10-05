@@ -3,11 +3,12 @@ body {
     padding: 0;
     background-color: var(--color-2);
     font-family: var(--font-family);
-    font-size: var(--font-size);
+    overflow: hidden;
+    /* font-size: var(--font-size); */
 }
 
 .sectionContainer{
-    height: 100vh;
+    height: fit-content;
     overflow-y: scroll;
 }
 
@@ -22,13 +23,11 @@ section {
     padding: 1rem 2rem;
 }
 .aboutMe p {
-    /* height: 50vh; */
     overflow: hidden;
-/* white-space: nowrap; */
-    text-overflow: "---"
+    text-overflow: "---";
+    line-height: 1.5
 }
 
-/* About me section */
 
 .titleAndImage {
     gap: 3rem;
@@ -58,6 +57,7 @@ h2 {
     text-align: center;
     gap: 2rem;
     height: 100%;
+    position: relative;
     /* padding: 2rem; */
 }
 
