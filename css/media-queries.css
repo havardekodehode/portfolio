@@ -8,15 +8,19 @@
     }
 }
 @media screen and (min-width: 768px) {
-    body{
-        overflow: visible;
+    body {
         display: flex;
         flex-direction: column;
         height: 100vh;
     }
     header {
         display: block;
+        flex: 0 0 auto;
         /* background-color:  */
+    }
+
+    main {
+        flex: 1;
     }
 
     .container {
@@ -36,7 +40,7 @@
     .imageAndName {
         gap: 6rem;
         height: 100%;
-        padding-top: 3.5rem;
+        padding: 1.5rem;
         /* margin-top: 7.5rem; */
         /* box-sizing: border-box; */
     }
@@ -48,7 +52,7 @@
     }
 
     .imageAndName img {
-        height: 7rem;
+        height: 10rem;
     }
 
     /* navbar */
@@ -77,13 +81,13 @@
     /* sections */
 
     .sectionContainer {
-        flex-grow: 1;
+        scroll-snap-type: y mandatory;
         height: 100%;
     }
 
     .sectionContainer > section {
+        scroll-snap-align: center; /* Snap the center of each section */
         height: 100%;
-        /* padding: 6rem 8rem; */
         margin: 0 auto;
         max-width: 59rem;
     }
@@ -104,12 +108,20 @@
         flex-direction: row;
     }
 
-    .project{
-        min-width: 15rem;
+    .project {
+        min-width: 10rem;
     }
 
     .modal {
-        width: 80vw;;
+        width: 50vw;
         height: auto;
+    }
+
+    #marsVideo {
+        clip-path: inset(1% 1% 4% 1%);
+    }
+
+    .exit-button {
+        bottom: -4rem;
     }
 }

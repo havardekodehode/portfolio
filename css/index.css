@@ -7,9 +7,9 @@ body {
     /* font-size: var(--font-size); */
 }
 
-.sectionContainer{
+.sectionContainer {
     height: fit-content;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 section {
@@ -25,9 +25,8 @@ section {
 .aboutMe p {
     overflow: hidden;
     text-overflow: "---";
-    line-height: 1.5
+    line-height: 1.5;
 }
-
 
 .titleAndImage {
     gap: 3rem;
