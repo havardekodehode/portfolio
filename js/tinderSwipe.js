@@ -62,6 +62,7 @@ function onPointerUp() {
     card.removeEventListener("pointerleave", onPointerUp);
     if (Math.abs(moveX) > card.clientWidth / 2) {
         complete();
+
         // cancel();
     } else {
         cancel();
@@ -70,6 +71,8 @@ function onPointerUp() {
 const scrollYBefore = window.scrollY;
 
 function complete() {
+    document.body.style.overflow = "visible";
+
     setTimeout(() => {
         document.getElementById("section1").scrollIntoView({
             block: "center",

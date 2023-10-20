@@ -1,15 +1,25 @@
+*,
+html {
+    /* outline: 1px solid #f00 !important; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: var(--color-2);
     font-family: var(--font-family);
     overflow: hidden;
+    overflow: visible;
     /* font-size: var(--font-size); */
 }
 
 .sectionContainer {
     height: fit-content;
-    overflow-y: auto;
+    overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 section {
@@ -20,7 +30,7 @@ section {
 }
 
 .aboutMe {
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
 }
 .aboutMe p {
     overflow: hidden;
@@ -150,7 +160,7 @@ h2 {
 }
 
 .exit-button {
-    bottom: 2rem;
+    bottom: 5rem;
     position: absolute;
     color: var(--color-1);
     background-color: rgba(171, 66, 66, 0.7);
@@ -173,4 +183,46 @@ h2 {
 }
 #todoVideo {
     clip-path: inset(2% 0% 2% 1%);
+}
+
+/* Section 3 */
+
+.contact-form {
+    text-align: left;
+}
+
+.formItem {
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.524);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.contact-form textarea {
+    height: 5rem;
+    resize: none;
+}
+
+.contact-form :active {
+}
+
+.contact-form > *:focus {
+    outline: none;
+}
+
+.contact-form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background-color: rgb(250, 155, 165);
 }

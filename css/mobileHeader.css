@@ -14,7 +14,7 @@
 }
 
 .card {
-    background-image: url("images/portrait.jpg");
+    background-image: url("../images/portrait.jpg");
     /* background-image: url("images/portrait.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;

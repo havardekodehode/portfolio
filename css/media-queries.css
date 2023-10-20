@@ -34,6 +34,7 @@
         width: 100vw;
         position: sticky;
         padding: 1.5rem;
+        background-color: var(--color-2);
         /* border-bottom: #83619a5f solid 1rem; */
     }
 

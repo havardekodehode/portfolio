@@ -17,14 +17,43 @@ liEls.forEach((li) => {
             targetElement.scrollIntoView({
                 // top: `${targetElement.offsetTop}`,
                 behavior: "smooth",
-                block: "start"
+                block: "start",
             });
     });
 });
 
+//Scroll functionality
+const sectionLinks = document.querySelectorAll(".navBar li");
+const sectionContainer = document.querySelector(".sectionContainer");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            const sectionId = entry.target.getAttribute("id");
+            const correspondingLink = document.querySelector(
+                `[data-target="${sectionId}"]`
+            );
+
+            correspondingLink.classList.toggle("active", entry.isIntersecting);
+        });
+    },
+    {
+        root: sectionContainer,
+        threshold: 0.5,
+    }
+);
+
+sectionLinks.forEach((link) => {
+    const targetId = link.getAttribute("data-target");
+    const section = document.getElementById(targetId);
+
+    if (section) {
+        observer.observe(section);
+    }
+});
+
 //Modal on mousedown
 const allProjects = document.querySelectorAll(".project");
-console.log(allProjects);
 
 allProjects.forEach((p) => {
     p.addEventListener("click", handleToggle);
@@ -33,7 +62,7 @@ allProjects.forEach((p) => {
 function handleToggle(e) {
     if (e.target instanceof HTMLAnchorElement) return;
     const projectId = e.currentTarget.id;
-    console.log(projectId); 
+    console.log(projectId);
     const currentModal = document.getElementById(`${projectId}Modal`);
     const video = currentModal.querySelector("video");
     currentModal.classList.add("visible");
@@ -47,24 +76,24 @@ function updateVideoSources() {
     const source2 = document.getElementById("marsVideoSrc");
     const source3 = document.getElementById("todoVideoSrc");
 
-    // if (w.matches) {
-    //     source1.src = "/portfolio/videos/pokedexDesktop.mp4";
-    //     source2.src = "/portfolio/videos/marsDesktop.mp4";
-    //     source3.src = "/portfolio/videos/todoDesktop.mp4";
-    // } else {
-    //     source1.src = "/portfolio/videos/pokedexMobile.mp4";
-    //     source2.src = "/portfolio/videos/marsMobile.mp4";
-    //     source3.src = "/portfolio/videos/todoMobile.mp4";
-    // }
     if (w.matches) {
-        source1.src = "/videos/pokedexDesktop.mp4";
-        source2.src = "/videos/marsDesktop.mp4";
-        source3.src = "/videos/todoDesktop.mp4";
+        source1.src = "/portfolio/videos/pokedexDesktop.mp4";
+        source2.src = "/portfolio/videos/marsDesktop.mp4";
+        source3.src = "/portfolio/videos/todoDesktop.mp4";
     } else {
-        source1.src = "/videos/pokedexMobile.mp4";
-        source2.src = "/videos/marsMobile.mp4";
-        source3.src = "/videos/todoMobile.mp4";
+        source1.src = "/portfolio/videos/pokedexMobile.mp4";
+        source2.src = "/portfolio/videos/marsMobile.mp4";
+        source3.src = "/portfolio/videos/todoMobile.mp4";
     }
+    // if (w.matches) {
+    //     source1.src = "/videos/pokedexDesktop.mp4";
+    //     source2.src = "/videos/marsDesktop.mp4";
+    //     source3.src = "/videos/todoDesktop.mp4";
+    // } else {
+    //     source1.src = "/videos/pokedexMobile.mp4";
+    //     source2.src = "/videos/marsMobile.mp4";
+    //     source3.src = "/videos/todoMobile.mp4";
+    // }
 
     document.querySelectorAll("video").forEach((v) => {
         v.load();
@@ -74,12 +103,25 @@ function updateVideoSources() {
 window.addEventListener("load", updateVideoSources);
 window.addEventListener("resize", updateVideoSources);
 
-//Resize tech elements of project, when they overflow
-// const techContainer = document.querySelector(".techContainer");
-// const techContainerWidth = techContainer.offsetWidth;
-// let allTechsWidth = 0;
-// techContainer.forEach((element) => (allTechsWidth += element.offsetWidth));
+//MailJS
 
-// if (allTechsWidth > techContainerWidth) {
-//     tech;
-// }
+emailjs.init("J2gHkP53zORp-fqsE");
+
+window.onload = function () {
+    document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("contact_service", "contact_form", this).then(
+                function () {
+                    console.log("SUCCESS!");
+                },
+                function (error) {
+                    console.log("FAILED...", error);
+                }
+            );
+        });
+};
