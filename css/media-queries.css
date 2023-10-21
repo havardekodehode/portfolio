@@ -19,6 +19,7 @@
         flex: 0 0 auto;
         top: 0;
         position: sticky;
+        z-index: 1;
         /* background-color:  */
     }
 
@@ -90,7 +91,8 @@
     }
 
     .sectionContainer > section {
-        scroll-snap-align: center; /* Snap the center of each section */
+        scroll-snap-align: start; /* Snap the center of each section */
+        scroll-snap-stop: always;
         max-height: 100%;
         margin: 0 auto;
         max-width: 59rem;
