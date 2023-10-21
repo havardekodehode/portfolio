@@ -38,6 +38,11 @@ section {
     line-height: 1.5;
 }
 
+.aboutMe img {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
 .titleAndImage {
     gap: 3rem;
     height: 5rem;
