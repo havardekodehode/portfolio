@@ -16,6 +16,7 @@ function createModalElement(project) {
         autoplay: "false",
         loop: "false",
         muted: "true",
+        controls: "true",
     });
 
     const source = createHtml("source", {
@@ -52,10 +53,9 @@ function createModalElement(project) {
 }
 
 function createProjectElement(project) {
-  
     const projectElement = createHtml("div", {
         className: "project",
-        id: project.id
+        id: project.id,
     });
 
     const projectName = createHtml("h3", {
