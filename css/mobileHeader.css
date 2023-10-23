@@ -14,7 +14,9 @@
 }
 
 .card {
-    background-image: url("../images/portrait.jpg");
+    background-image: url("../images/portrait.webp");
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.524);
     /* background-image: url("images/portrait.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,6 +27,14 @@
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 1.5rem;
+}
+
+.info {
+    padding: 0.5rem;
+}
+
+.info > * {
+    padding: 0.2rem;
 }
 
 .actions {
@@ -40,7 +50,8 @@
     outline: none;
     border-radius: 100%;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
-    padding: 2rem;
+    padding: 1.9rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.524);
 }
 
 .actions button img {

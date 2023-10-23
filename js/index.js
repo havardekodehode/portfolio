@@ -53,16 +53,27 @@ sectionLinks.forEach((link) => {
 });
 
 //Modal on mousedown
+
 const allProjects = document.querySelectorAll(".project");
 
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const project = entry.target;
+        if (entry.isIntersecting) {
+            project.addEventListener("click", handleToggle);
+        } else {
+            project.removeEventListener("click", handleToggle);
+        }
+    });
+});
+
 allProjects.forEach((p) => {
-    p.addEventListener("click", handleToggle);
+    projectObserver.observe(p);
 });
 
 function handleToggle(e) {
     if (e.target instanceof HTMLAnchorElement) return;
     const projectId = e.currentTarget.id;
-    console.log(projectId);
     const currentModal = document.getElementById(`${projectId}Modal`);
     const video = currentModal.querySelector("video");
     currentModal.classList.add("visible");
@@ -118,6 +129,11 @@ window.onload = function () {
             emailjs.sendForm("contact_service", "contact_form", this).then(
                 function () {
                     console.log("SUCCESS!");
+                    document.querySelector(".contact-form").style.display =
+                        "none";
+                    const response = document.createElement("h2");
+                    response.textContent = "Sent";
+                    document.querySelector(".contact").append(response);
                 },
                 function (error) {
                     console.log("FAILED...", error);
