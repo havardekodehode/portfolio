@@ -98,12 +98,8 @@
         max-width: 59rem;
     }
 
-    .sectionContainer #section1 {
-        /* padding-bottom: 10rem; */
-    }
-    .sectionContainer #section2 {
-        /* padding: 0 10rem;
-        padding-bottom: 10rem; */
+    .aboutMe img {
+        display: block;
     }
 
     .titleAndImage img {

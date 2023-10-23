@@ -79,8 +79,8 @@
 /* Swipe hint */
 
 .swipeHint {
-    animation: swipeHint 4s ease-out infinite; /* Adjust duration as needed */
-    transform-origin: center bottom; /* Rotate around the bottom center of the element */
+    animation: swipeHint 4s ease-out infinite;
+    transform-origin: center bottom; /
 }
 
 @keyframes swipeHint {
