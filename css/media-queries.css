@@ -67,7 +67,7 @@
         justify-content: center;
         gap: 1rem;
         list-style-type: none;
-        padding: 1rem;
+        /* padding: 1rem; */
     }
 
     .navBar ul li {
