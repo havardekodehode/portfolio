@@ -1,4 +1,40 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="-16 -16 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .loading-animation {
+      /* margin-top: 15rem; */
+      /* margin-bottom: 20rem; */
+      transform: scale(0.6);
+      animation: rollingPokeball 2s ease-in-out infinite;
+      display: block;
+      margin: 0 auto;
+      overflow: visible;
+    }
+
+    @keyframes rollingPokeball {
+      0%, 100% {
+        transform: translateX(0) rotate(0deg);
+      }
+      5% {
+        transform: translateX(-0.2rem) rotate(-3deg);
+      }
+      23% {
+        transform: translateX(0.2rem) rotate(3deg);
+      }
+      40% {
+        transform: translateX(0) rotate(0deg);
+      }
+      60% {
+        transform: translateX(0) rotate(0deg);
+      }
+      78% {
+        transform: translateX(-0.2rem) rotate(-3deg);
+      }
+      95% {
+        transform: translateX(0.2rem) rotate(3deg);
+      }
+    }
+  </style>
+<g class="loading-animation" id="pokeball">
 <path d="M22.0403 0.875H43.0159V6.00572H22.0403V0.875Z" fill="#111112"/>
 <path d="M11.0243 6.00574H22.0403V11.1365H11.0243V6.00574Z" fill="#111112"/>
 <path d="M42.7141 6.00574H52.9756V11.2874H42.7141V6.00574Z" fill="#111112"/>
@@ -50,4 +86,5 @@
 <path d="M11.1754 42.9771H26.8694V53.2385H11.1754V42.9771Z" fill="#B9B9B3"/>
 <path d="M43.0159 53.2385H22.0403V58.3692H43.0159V53.2385Z" fill="#B9B9B3"/>
 <path d="M52.9756 48.4097H26.8693V53.2386H52.9756V48.4097Z" fill="#FEFEF9"/>
+</g>
 </svg>

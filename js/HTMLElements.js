@@ -1,42 +1,42 @@
-import { projects } from "./data.js";
-import { createHtml } from "./utils.js";
+import { projects } from './data.js';
+import { createHtml } from './utils.js';
 
 function createModalElement(project) {
-    const modal = createHtml("div", {
-        className: "modal",
+    const modal = createHtml('div', {
+        className: 'modal',
         id: `${project.id}Modal`,
     });
 
-    const videoContainer = createHtml("div", {
-        className: "video-container",
+    const videoContainer = createHtml('div', {
+        className: 'video-container',
     });
 
-    const video = createHtml("video", {
+    const video = createHtml('video', {
         id: `${project.id}Video`,
-        autoplay: "false",
-        loop: "false",
-        muted: "true",
-        controls: "true",
+        autoplay: 'false',
+        loop: 'false',
+        muted: 'true',
+        controls: 'true',
     });
 
-    const source = createHtml("source", {
+    const source = createHtml('source', {
         src: project.videoSrc,
-        type: "video/mp4",
+        type: 'video/mp4',
         id: `${project.id}VideoSrc`,
     });
 
-    const exitButton = createHtml("button", {
+    const exitButton = createHtml('button', {
         id: `${project.id}`,
-        className: "exit-button",
-        innerText: "Back",
+        className: 'exit-button',
+        innerText: 'Back',
     });
 
     const fallback = document.createTextNode(
-        "Your browser does not support this video format"
+        'Your browser does not support this video format'
     );
 
-    exitButton.addEventListener("click", () => {
-        modal.classList.remove("visible");
+    exitButton.addEventListener('click', () => {
+        modal.classList.remove('visible');
         video.pause();
         video.currentTime = 0;
     });
@@ -53,35 +53,35 @@ function createModalElement(project) {
 }
 
 function createProjectElement(project) {
-    const projectElement = createHtml("div", {
-        className: "project",
+    const projectElement = createHtml('div', {
+        className: `project ${project.id}`,
         id: project.id,
     });
 
-    const projectName = createHtml("h3", {
+    const projectName = createHtml('h3', {
         textContent: `${project.name}`,
     });
 
-    const projectImage = createHtml("img", {
+    const projectImage = createHtml('img', {
         src: `${project.imageSrc}`,
         alt: `${project.name}`,
     });
 
-    const techContainer = createHtml("div", {
-        className: "techContainer",
+    const techContainer = createHtml('div', {
+        className: 'techContainer',
     });
 
     project.techStack.forEach((tech) => {
-        const techElement = createHtml("div", {
+        const techElement = createHtml('div', {
             className: `tech ${tech.toLowerCase()}`,
             textContent: tech,
         });
         techContainer.appendChild(techElement);
     });
 
-    const githubLink = createHtml("a", {
+    const githubLink = createHtml('a', {
         href: `${project.githubLink}`,
-        textContent: "Github",
+        textContent: 'Github',
     });
 
     projectElement.append(projectName, projectImage, techContainer, githubLink);
@@ -90,7 +90,7 @@ function createProjectElement(project) {
 }
 
 export function addProjectsToContainer() {
-    const projectsContainer = document.querySelector(".projectsContainer");
+    const projectsContainer = document.querySelector('.projectsContainer');
 
     projects.forEach((project) => {
         const projectElement = createProjectElement(project);
