@@ -1,3 +1,13 @@
+@media screen and (max-width: 380px) {
+    .bg-mobile {
+        scale: 1.1;
+    }
+
+    .projectsContainer {
+        scale: 0.75;
+    }
+}
+
 @media screen and (min-width: 450px) {
     section > * {
         box-sizing: border-box;
