@@ -3,116 +3,157 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Portfolio showcasing myself, my projects and how to get in contact with me"
-        />
-        <title>Portfolio Håvard Einarsen</title>
-        <link rel="shortcut icon" href="#" type="image/x-icon" />
-        <link rel="stylesheet" href="css/variables.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/layout.css" />
-        <link rel="stylesheet" href="css/mobileHeader.css" />
-        <link rel="stylesheet" href="css/media-queries.css" />
+        <title>Portfolio</title>
+        <script defer src="index.js" type="module"></script>
+        <link rel="stylesheet" href="variables.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="layout.css" />
+        <link rel="stylesheet" href="animations.css" />
+        <link rel="stylesheet" href="media-queries.css" />
         <script
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         ></script>
-        <script src="js/index.js" type="module" defer></script>
     </head>
-    <body>
-        <header>
-            <div class="container flex-col">
-                <div class="cardContainer flex-row just-cen">
-                    <div class="card flex-col just-end alig-sta swipeHint">
-                        <div class="is-like">LIKE</div>
+    <body class="flex-col">
+        <div class="background-container">
+            <svg
+                class="bg-mobile"
+                viewBox="0 0 499 921"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMax"
+            >
+                <g clip-path="url(#clip0_461_178)">
+                    <path d="M0 0L499 0L499 921L0 921L0 0Z" fill="#F0F0F0" />
 
-                        <div class="info">
-                            <h1>Håvard Einarsen</h1>
-                            <h5>27, Front-end utvikler</h5>
+                    <path
+                        d="M3071 389L2879.36 274.595C2793.99 251.066 2729.48 211.926 2559.52 193.826C2389.16 175.727 2219.99 156.496 2049.63 170.523C1879.67 184.55 1769.2 188.396 1599.24 225.5C1428.88 262.378 1199.42 296.032 1029.05 320.24C859.091 344.222 800.487 336.077 630.523 320.24C460.163 304.403 382.161 283.871 211.8 274.595C41.8364 265.093 -417.621 386.738 -503 389V225.5L-503 -184H-417.621C-332.242 -184 -161.485 -184 8.47902 -184C178.84 -184 348.009 -184 518.37 -184C688.334 -184 859.091 -184 1029.05 -184C1199.42 -184 1368.58 -184 1538.95 -184C1708.91 -184 1879.67 -184 2049.63 -184C2219.99 -184 2389.16 -184 2559.52 -184C2729.48 -184 2900.24 -184 2985.62 -184H3071L3071 389Z"
+                        class="top"
+                    />
+                    <path
+                        d="M3071 676.475L2990.23 742.123C2909.46 769.99 2747.93 825.187 2587.14 846.623C2425.98 868.059 2265.95 855.734 2104.79 839.121C1944 822.508 1782.46 802.144 1621.68 758.2C1460.52 714.524 1300.48 647.537 1139.32 618.866C978.537 590.463 817 600.109 656.215 618.866C495.054 637.622 335.019 665.489 173.858 676.475C13.0731 687.729 -148.463 682.37 -229.232 679.691L-310 677.011V1162H-229.232C-148.463 1162 13.0731 1162 173.858 1162C335.019 1162 495.054 1162 656.215 1162C817 1162 978.537 1162 1139.32 1162C1300.48 1162 1460.52 1162 1621.68 1162C1782.46 1162 1944 1162 2104.79 1162C2265.95 1162 2425.98 1162 2587.14 1162C2747.93 1162 2909.46 1162 2990.23 1162H3071V676.475Z"
+                        class="bottom"
+                    />
+                </g>
+
+                <defs>
+                    <clipPath id="clip0_461_178">
+                        <rect
+                            width="999"
+                            height="1021"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 999 0)"
+                        />
+                    </clipPath>
+                </defs>
+            </svg>
+            <svg
+                class="bg-desktop"
+                viewBox="0 0 2200 1024"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMax"
+            >
+                <g clip-path="url(#clip0_481_228)">
+                    <path
+                        d="M0 0L2200 0L2200 1024L0 1024L0 0Z"
+                        fill="#F0F0F0"
+                    />
+
+                    <path
+                        d="M10874.7 432.504L10196.1 305.304C9893.73 279.144 9665.33 235.626 9063.47 215.503C8460.21 195.379 7861.17 173.998 7257.91 189.594C6656.05 205.189 6264.9 209.466 5663.04 250.719C5059.78 291.721 4247.23 329.139 3643.97 356.054C3042.11 382.718 2834.59 373.662 2232.74 356.054C1629.47 338.446 1353.26 315.618 750.001 305.304C148.147 294.739 -1478.83 429.988 -1781.16 432.504V250.719L-1781.16 -204.578L-1478.83 -204.578C-1176.5 -204.578 -571.829 -204.578 30.0255 -204.578C633.287 -204.578 1232.33 -204.578 1835.59 -204.578C2437.45 -204.578 3042.11 -204.578 3643.97 -204.578C4247.23 -204.578 4846.27 -204.578 5449.53 -204.578C6051.39 -204.578 6656.05 -204.578 7257.91 -204.578C7861.17 -204.578 8460.21 -204.578 9063.47 -204.578C9665.33 -204.578 10270 -204.578 10572.3 -204.578H10874.7L10874.7 432.504Z"
+                        class="top-desktop"
+                    />
+                    <path
+                        d="M10874.7 752.129L10588.7 825.118C10302.6 856.101 9730.63 917.472 9161.28 941.305C8590.6 965.139 8023.9 951.434 7453.22 932.964C6883.86 914.493 6311.85 891.851 5742.5 842.993C5171.81 794.433 4605.12 719.954 4034.43 688.077C3465.08 656.498 2893.07 667.223 2323.71 688.077C1753.03 708.931 1186.33 739.914 615.649 752.129C46.2946 764.641 -525.72 758.683 -811.727 755.704L-1097.73 752.725V1291.95H-811.727C-525.72 1291.95 46.2946 1291.95 615.649 1291.95C1186.33 1291.95 1753.03 1291.95 2323.71 1291.95C2893.07 1291.95 3465.08 1291.95 4034.43 1291.95C4605.12 1291.95 5171.81 1291.95 5742.5 1291.95C6311.85 1291.95 6883.86 1291.95 7453.22 1291.95C8023.9 1291.95 8590.6 1291.95 9161.28 1291.95C9730.63 1291.95 10302.6 1291.95 10588.7 1291.95H10874.7V752.129Z"
+                        class="bottom-desktop"
+                    />
+                </g>
+                <defs>
+                    <clipPath id="clip0_481_228">
+                        <rect
+                            width="2200"
+                            height="1024"
+                            fill="white"
+                            transform="matrix(-1 0 0 1 2200 0)"
+                        />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navbar-nav flex-row just-cen">
+                <li class="nav-item" data-target="about-me-section">
+                    <a href="#" class="nav-link">
+                        <span class="link-text"> Om meg </span>
+                    </a>
+                </li>
+                <li class="nav-item" data-target="project-section">
+                    <a href="#" class="nav-link">
+                        <span class="link-text"> Prosjekter </span>
+                    </a>
+                </li>
+                <li class="nav-item" data-target="contact-section">
+                    <a href="#" class="nav-link">
+                        <span class="link-text"> Kontakt </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about-me-section" class="flex-col alig-cen just-cen">
+                <div class="hero flex-row just-cen alig-cen">
+                    <div class="portrait">
+                        <img
+                            src="images/portrait.webp"
+                            alt="portrait of myself"
+                        />
+                    </div>
+                    <div class="intro-text-container">
+                        <p class="first-text">Hei! Mitt navn er</p>
+                        <p class="bold second-text">Håvard</p>
+
+                        <div class="background-blue">
+                            <p class="bold">Frontend-utvikler</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="actions flex-row just-cen alig-cen">
-                    <button class="flex-row just-cen alig-cen" id="dislike">
-                        <img src="images/x.svg" alt="Image of an X" />
-                    </button>
-                    <button class="flex-row just-cen alig-cen" id="like">
-                        <img
-                            src="images/heart.svg"
-                            alt="Image of a heart"
-                            srcset=""
-                        />
-                    </button>
+                <div class="about-me-text flex-col just-cen alig-sta">
+                    <div class="about-me-block hidden">
+                        <p>
+                            De siste 6 månedene har jeg gjennom kurset Kodehode
+                            jobbet intensivt med og lært meg alt fra Figma til
+                            HTML, CSS, Git, Javascript, Typescript, React, og er
+                            nå i innspurten av kurset hvor jeg jobber med
+                            Node.JS, Express, MongoDB og SQL. Backend-delen er
+                            definitivt det morsomste, og MERN-stacken vil jeg
+                            derfor bli enda bedre på.
+                        </p>
+                    </div>
+                    <div class="about-me-block hidden">
+                        <p>
+                            Når jeg ikke koder, finner du meg på Os kodeklubb,
+                            badstuen på treningsenteret eller et sted på
+                            de_dust2. Jeg gleder meg til nye utfordringer og bli
+                            en bedre utvikler.
+                        </p>
+                    </div>
+                    <div class="about-me-block hidden">
+                        <p>Ta gjerne en titt på mine prosjekter nedenfor.</p>
+                    </div>
+                    <div class="about-me-block hidden">
+                        <p>Takk for interessen.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="desktopHero flex-col just-sta" id="section1desktop">
-                <div class="imageAndName flex-row just-cen alig-cen">
-                    <h2>Håvard Einarsen<br />Front-end utvikler</h2>
-                </div>
-                <div class="navBar">
-                    <ul>
-                        <li data-target="section1" class="section1link">
-                            Om meg
-                        </li>
-                        <li data-target="section2" class="section2link">
-                            Prosjekter
-                        </li>
-                        <li data-target="section3" class="section3link">
-                            Kontakt
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="sectionContainer">
-                <section
-                    class="aboutMe flex-col alig-cen just-cen"
-                    id="section1"
-                >
-                    <!-- <div class="titleAndImage flex-row alig-cen">
-                        <h2>Om meg</h2>
-                        <img src="images/portrait.jpg" alt="" />
-                    </div> -->
-                    <img src="images/portrait.webp" alt="" srcset="" />
-
-                    <p>
-                        Hei! Jeg heter Håvard og er frontend utvikler.<br /><br />
-
-                        Jeg er for tiden deltaker i Kodehode, hvor vi
-                        mesteparten av kurset har jobbet med frontend-utvikling
-                        og backend nå i innspurten. Spesielt backend virker
-                        veldig spennende, og noe jeg vil fordype meg mer i. Jeg
-                        er også medlem i Os kodeklubb, og liker å kode på
-                        fritiden.
-                        <br /><br />
-
-                        De siste 6 månedene har jeg forbedret meg i alt fra
-                        Figma til HTML, CSS, Git, Javascript, Typescript, React,
-                        og nå i innspurten av kurset: node, express, MongoDB og
-                        SQL. React er mitt ess i ermet, og MERN-stacken virker
-                        da veldig interessant for meg. Jeg er også lærevillig og
-                        åpen for å lære mer. .<br /><br />
-
-                        Jeg gleder meg til nye utfordringer, og bli en bedre
-                        utvikler. Gi gjerne en lyd hvis du vil bli bedre kjent.
-                        Takk for interessen.
-                    </p>
-                </section>
-                <section
-                    class="projects flex-col alig-cen just-cen"
-                    id="section2"
-                >
-                    <!-- <h2>Prosjekter</h2> -->
-                    <div class="projectsContainer"></div>
-                </section>
-                <section
-                    class="contact flex-col just-cen alig-cen"
-                    id="section3"
-                >
+            </section>
+            <section id="project-section">
+                <div class="projectsContainer flex-col just-cen alig-cen"></div>
+            </section>
+            <section id="contact-section">
+                <div class="form-container flex-col just-cen alig-cen">
                     <form
                         class="contact-form flex-col alig-sta"
                         id="contact-form"
@@ -141,9 +182,9 @@
                         ></textarea>
                         <input class="formItem" type="submit" value="Send" />
                     </form>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
-        <!-- <footer></footer> -->
+        <footer class="flex-row just-spaB alig-cen"></footer>
     </body>
 </html>

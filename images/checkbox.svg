@@ -1,5 +1,5 @@
 <svg class="check" width="38" height="54" viewBox="0 0 38 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
+  <!-- <style>
 
     .checkbox{
         animation: move 3s infinite ease-in-out; 
@@ -8,17 +8,21 @@
 
     .tick{
         opacity: 0;
-        animation: tick 3s infinite ease-in; 
+        animation: tick 3s normal ease-in ; 
     }
 
     @keyframes tick{
-        10%{
+        0%{
             opacity: 0;
         }
         
-        100%{
+        50%{
             opacity: 100;
 
+        }
+
+        100%{
+            opacity: 100;
         }
     }
     @keyframes move{
@@ -28,11 +32,11 @@
 
         }
         100%{
-            transform: translateX(3rem);
-            opacity: 0;
+            /* transform: translateX(3rem); */
+            opacity: 100;
         }
     }
-  </style>
+  </style> -->
 
 <g class="checkbox">
     <path d="M3.83432 0.8914L4.33559 7.35614L2.33559 29.8561L0.841943 42.7847" stroke="black"/>

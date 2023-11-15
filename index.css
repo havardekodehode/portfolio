@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text-primary);
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+    scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-track {
+    background: var(--bg-secondary);
+}
+body::-webkit-slider-thumb {
+    background: var(--bg-complementary);
+}
+
+footer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg-mobile {
+    display: inline-block;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-desktop {
+    display: none;
+    height: 100%;
+    z-index: -1;
+}
+
+/* typography */
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+
+.navbar {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    height: 3.5rem;
+    z-index: 5;
+    margin: 0.5rem;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.nav-icon {
+    fill: gray;
+}
+
+.active {
+    background: rgba(128, 128, 128, 0.404);
+}
+
+/* main */
+
+main {
+}
+
+section > * {
+    box-sizing: border-box;
+    padding-bottom: 3.5rem;
+}
+
+.hero {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.hero .portrait {
+    z-index: 2;
+}
+
+.hero .portrait img {
+    height: 10rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.intro-text-container {
+    position: relative;
+}
+
+.background-blue {
+    position: absolute;
+    background-color: var(--bg-secondary);
+    white-space: nowrap;
+    top: 3rem;
+    left: -9rem;
+    padding-left: 9rem;
+    padding-right: 2rem;
+    color: rgba(255, 255, 255, 0.93);
+    z-index: 0;
+    overflow-x: visible;
+}
+
+.about-me-text {
+    scroll-snap-align: center;
+
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    min-height: 100vh;
+    max-width: 40rem;
+}
+
+.about-me-block {
+    margin-bottom: 3rem;
+}
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 100;
+}
+
+/* Project section */
+
+.projects {
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    height: 100vh;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+.projectsContainer h3 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(250, 250, 250, 0.296);
+    backdrop-filter: blur(10px);
+    padding: 1rem 3rem;
+    min-width: 15rem;
+    cursor: pointer;
+}
+
+.project img {
+    height: 5rem;
+    width: 5rem;
+    /* margin: 0.5rem; */
+    /* overflow: visible; */
+}
+
+.mars img {
+    padding: 0.5rem;
+    animation: spin 360s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.techContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+
+.tech {
+    /* font-size: clamp(0.3rem, 0.6rem, 1rem); */
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.html {
+    background-color: #c96f58;
+}
+
+.css {
+    background-color: #7aa1be;
+}
+
+.js {
+    background-color: #cec788;
+}
+
+.ts {
+    background-color: #377cc8;
+}
+
+.react {
+    background-color: #61dafb;
+}
+
+.modal {
+    display: none;
+}
+
+/* contact section */
+
+.form-container {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.formItem {
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.524);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.contact-form textarea {
+    height: 5rem;
+    resize: none;
+}
+
+.contact-form :active {
+}
+
+.contact-form > *:focus {
+    outline: none;
+}
+
+.contact-form input[type='submit'] {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background-color: rgb(220, 220, 220);
+
+    width: 21rem;
+}

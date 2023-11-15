@@ -1,0 +1,98 @@
+/* hero */
+
+.first-text {
+    animation: fade-in 1s ease-in;
+}
+
+.second-text {
+    animation: fade-in-2 2s ease-in;
+}
+
+.background-blue {
+    animation: fade-in-3 3s ease-in;
+}
+
+/* about me */
+
+.fade-in {
+    animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateX(-3rem);
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+@keyframes fade-in-2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(0rem);
+    }
+    100% {
+        opacity: 100;
+    }
+}
+@keyframes fade-in-2-rev {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(0rem);
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes fade-in-3 {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+        transform: translateX(-15rem);
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+/* svg-background */
+
+.top {
+    fill: var(--bg-secondary);
+    transition: transform 1.5s ease;
+
+    animation-play-state: running;
+}
+
+.bottom {
+    fill: var(--bg-complementary);
+    transform-origin: bottom center;
+    transition: transform 1.5s ease;
+    animation-play-state: running;
+}
+.top-desktop {
+    fill: var(--bg-secondary);
+    transition: transform 1.5s ease;
+
+    animation-play-state: running;
+}
+
+.bottom-desktop {
+    fill: var(--bg-complementary);
+    transform-origin: bottom center;
+    transition: transform 1.5s ease;
+    animation-play-state: running;
+}
