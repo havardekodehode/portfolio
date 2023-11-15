@@ -201,7 +201,7 @@ section > * {
 }
 
 .mars img {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     animation: spin 360s infinite;
 }
 
