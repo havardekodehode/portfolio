@@ -109,37 +109,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 switch (index) {
                     case 0:
                         topPath.style.transform =
-                            'translateY(0%) translateX(-80%) scale(1)';
+                            'translateY(0%) translateX(-110%) scale(1)';
                         bottomPath.style.transform =
-                            'translateY(0%) translateX(-100%) scale(1)';
+                            'translateY(0%) translateX(-110%) scale(1)';
                         topPathD.style.transform =
-                            'translateY(0%) translateX(-80%) scale(1)';
+                            'translateY(0%) translateX(-110%) scale(1)';
                         bottomPathD.style.transform =
-                            'translateY(0%) translateX(-100%) scale(1)';
+                            'translateY(0%) translateX(-110%) scale(1)';
 
                         break;
 
                     case 1:
                         topPath.style.transform =
-                            'translateY(0%) translateX(-100%) scale(0.4)';
+                            'translateY(0%) translateX(-100%) scale(4)';
                         bottomPath.style.transform =
-                            'translateY(0%) translateX(-100%) scale(4)';
+                            'translateY(50%) translateX(-100%) scale(1)';
                         topPathD.style.transform =
-                            'translateY(0%) translateX(-100%) scale(0.4)';
-                        bottomPathD.style.transform =
                             'translateY(0%) translateX(-100%) scale(4)';
+                        bottomPathD.style.transform =
+                            'translateY(50%) translateX(-100%) scale(1)';
 
                         break;
 
                     case 2:
                         topPath.style.transform =
-                            'translateY(0%) translateX(-100%) scale(4)';
+                            'translateY(0%) translateX(-150%) scale(0.4)';
                         bottomPath.style.transform =
-                            'translateY(50%) translateX(-100%) scale(1)';
+                            'translateY(0%) translateX(-150%) scale(4)';
                         topPathD.style.transform =
-                            'translateY(0%) translateX(-100%) scale(4)';
+                            'translateY(0%) translateX(-150%) scale(0.4)';
                         bottomPathD.style.transform =
-                            'translateY(50%) translateX(-100%) scale(1)';
+                            'translateY(0%) translateX(-150%) scale(4)';
 
                         break;
 
