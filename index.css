@@ -67,7 +67,7 @@ p {
     backdrop-filter: blur(10px);
     height: 3.5rem;
     z-index: 5;
-    /* margin: 0.5rem; */
+    margin: 0.5rem;
 }
 
 .navbar-nav {
@@ -140,14 +140,15 @@ section > * {
 
 .about-me-text {
     scroll-snap-align: center;
+
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     min-height: 100svh;
     max-width: 40rem;
-    gap: 1.5rem;
 }
 
 .about-me-block {
+    margin-bottom: 3rem;
 }
 .hidden {
     opacity: 0;
@@ -169,7 +170,7 @@ section > * {
     align-items: center;
     text-align: center;
     gap: 2rem;
-    height: 100vh;
+    height: 100svh;
     position: relative;
     scroll-snap-align: center;
 }
@@ -295,9 +296,6 @@ section > * {
     margin-top: 2rem;
     padding: 2rem 0;
     background-color: rgb(220, 220, 220);
+
     width: 21rem;
-    -webkit-margin-top: 2rem;
-    -webkit-padding: 2rem 0;
-    -webkit-background-color: rgb(220, 220, 220);
-    -webkit-width: 21rem;
 }
